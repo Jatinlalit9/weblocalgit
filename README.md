@@ -1,0 +1,2 @@
+# weblocalgit
+WebLocalGIT Azure
