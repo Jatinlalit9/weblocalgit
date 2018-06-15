@@ -1,0 +1,232 @@
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[Freight_Reconciliation_ProcessBills]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[Freight_Reconciliation_ProcessBills]
+GO
+
+SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS ON 
+GO
+
+
+CREATE procedure Freight_Reconciliation_ProcessBills 
+(
+	@bol_no varchar(6), 
+	@invoice_no varchar(10), 
+	@invoice_amount float, 
+	@invoice_date datetime, 
+	@invoice_due_date datetime, 
+	@sep_check bit, 
+	@hold bit, 
+	@gl_acct varchar(10),
+	@comments varchar(5000),
+	@created_by int,
+             @variance_within_tolerance bit,
+             @CarrierShipment_id int	,
+	@SeqNo		INT
+           
+)
+as
+
+Declare
+@pro_no varchar(15),
+@freight_estimate float,
+@freight_type varchar(7),
+@freight_billing_id INT,
+
+@variance float,
+@variance_tolerance float,
+
+@multiple_bill bit,
+@prev_bill_status int,
+
+--@freight_ua_share float,
+@freight_debit float,
+@bill_status int,
+@freight_bill_id int,
+
+@subject varchar(255),
+@message varchar(500),
+@email_from varchar(50),
+@carrier varchar(100),
+@userName varchar(100),
+@log_info varchar(1000)
+
+Begin 
+
+set @multiple_bill=0
+
+Select @freight_estimate=bol_freight_estimate,
+       @freight_billing_id=freight_billing_id,
+       @pro_no=pro_no,
+       @prev_bill_status= bill_status
+from Freight_Reconciliation_GetAllBillsView 
+where bol_no=@bol_no and SeqNo=@SeqNo
+
+if(@pro_no is null)
+	SET @pro_no = (Select Top 1 Pro_no from carrier_shipment_history where convert(varchar,Bol_no) = @bol_no and carrier_idx is not null)
+
+
+set @variance=abs(@freight_estimate- @invoice_amount)
+
+if(@variance_within_tolerance is null)
+Begin
+
+---- Calculate Variance, determine variance is within limit 
+Select @variance_tolerance=cast([description] as float) from lookups where lookup_id=5059
+
+
+
+if (@prev_bill_status=2)
+	set @multiple_bill=1
+
+If (@variance>@variance_tolerance)
+	set @variance_within_tolerance=1
+else
+	set @variance_within_tolerance=0
+
+End
+
+--- get Freight type and Freight debit ---
+
+
+Select @freight_type=dbo.Freight_Reconciliation_GetFreightType(@bol_no)
+Select @freight_debit=dbo.Freight_Reconciliation_GetFreightDebit(@bol_no,@freight_type,@invoice_amount)
+
+
+
+------Bill status ------
+Set @bill_status=1 -- Set to updated
+
+If (@multiple_bill=1)
+Begin 
+	set @bill_status=3	-- Set to pending
+	set @comments='MULTIPLE: /n'+ @Comments
+End 
+
+If (@variance_within_tolerance=1)
+Begin 
+	set @bill_status=3	-- Set to pending
+	set @comments='FRGT REVW: /n'+ @Comments
+End 
+
+If (@hold=1 )
+Begin 
+	set @bill_status=3	-- Set to pending
+	set @comments='ACCT HOLD: /n'+ @Comments
+End 
+
+/*This temp table can be used to get data for the BOL# which contains multiple legs*/
+Create TABLE #tempMultiLegs
+	(  
+	LegDescription 	Varchar(255)	NULL ,
+	ship_group_idx 	INT		NULL,  
+	seq_no	 	INT 		NULL ,
+	journey_leg_id	INT	 	NULL ,
+	carrier_id	INT	 	NULL ,
+	frgt_type_id 	INT	 	NULL,
+	frgt_est 	FLOAT		NULL, 
+	carrier_code	VARCHAR(15) 	NULL,
+	FrtType    	VARCHAR(5)	NULL
+	)
+
+if(@SeqNo > 0)
+	INSERT INTO #tempMultiLegs exec Freight_Recociliation_GetMultipleLegs @bol_no,'' 
+
+--- insert in Freight reconciliation bills --- 
+Exec nag_getnextkey 'freight_reconciliation_bills',@freight_bill_id Output
+
+if(@CarrierShipment_id is null)
+Begin
+if(@SeqNo <=  0)
+	select @CarrierShipment_id=carrier_idx from ShippingPicklist_History_view where bol_no=@bol_no
+ELSE
+	select @CarrierShipment_id=carrier_id from #tempMultiLegs where seq_no=@SeqNo
+ 
+End
+
+
+set @log_info = 'Insert into freight_reconciliation_bills 
+		(freight_bill_id,bol_no,pro_no,invoice_no,invoice_amount,invoice_date,invoice_due_date,sep_check,hold,freight_billing,freight_type,freight_debit,variance,gl_acct,bill_status,created_by,created_on,CarrierShipment_id,seq_no)
+		values ('+ cast(@freight_bill_id as varchar(4)) + ','+ @bol_no+ ','+ @pro_no +','+ @invoice_no +','+ cast(@invoice_amount as varchar) + ',' + cast(@invoice_date as varchar) + ',' + cast(@invoice_due_date as varchar) + ',' + cast(@sep_check as varchar) + ',' + cast(@hold as varchar) + ',' + cast(@freight_billing_id as varchar) + ',' + cast(@freight_type as varchar) + ',' + cast(@freight_debit as varchar) + ',' + cast(@variance as varchar) + ',' + cast(@gl_acct as varchar) + ',' + cast(@bill_status as varchar) + ',' + cast(@created_by as varchar) + ',' + cast(getDate() as varchar) +',' +cast(@CarrierShipment_id as varchar)+','+cast(@SeqNo as varchar)+')'
+exec Logging_Information_In_Table 'FreightReconciliation','Freight_Reconciliation_ProcessBills', 'Freight_Reconciliation_bills', @log_info, 'Insert', @created_by
+
+Insert into freight_reconciliation_bills 
+	(freight_bill_id,bol_no,pro_no,invoice_no,invoice_amount,invoice_date,invoice_due_date,sep_check,hold,freight_billing,freight_type,freight_debit,variance,gl_acct,bill_status,created_by,created_on,CarrierShipment_id,seq_no)
+values (@freight_bill_id,@bol_no,@pro_no,@invoice_no,@invoice_amount,@invoice_date,@invoice_due_date,@sep_check,@hold,@freight_billing_id,@freight_type,@freight_debit,@variance,@gl_acct,@bill_status,@created_by,getDate(),@CarrierShipment_id,@SeqNo)
+
+
+
+--- Insert in freight reconciliation orders 
+Exec Freight_Reconciliation_InsertProRatedFreight @freight_bill_id,@created_by
+
+-- Insert Comments 
+exec Freight_Reconciliation_InsertComment @freight_bill_id,@comments,@created_by
+
+
+-------- Send Email --------------
+/*Set @email_from='freightreconciliation'
+if (@bill_status=3)---Pending
+Begin
+	
+	Select @carrier=carrier_code_name from Freight_Reconciliation_GetAllBillsView where freight_bill_id=@freight_bill_id
+	Select @userName=FullName from users where UserID=@created_by
+	
+	If (@variance_within_tolerance=1)
+		set @subject='Review Required:'+  isNull(@carrier,'') +' Invoice PRO# '+ isNull(@pro_no,'') +' suspended for : Variance from Estimate'
+	Else if (@Hold=1)
+		set @subject='Invoice Hold:'+  IsNull(@carrier,'') +' Invoice PRO# '+ isNull(@pro_no,'') +' suspended : Accounting Hold'
+	
+	set @message= 'Carrier:' + @carrier + 
+		      ' Invoice #' + cast(@invoice_no as varchar(10))+
+		      ' Invoice Due Date:' + cast(@invoice_due_date as varchar(20))+
+		      ' PRO# '+	isNull(@pro_no,'') +
+		      ' BOL#' +  @bol_no +
+		      ' Freight Estimate: $'+ cast(@freight_estimate as varchar(20))+
+		      ' Carrier Charge: $'+ cast(@invoice_amount as varchar(20))+
+		      ' Initiated By:' + @userName
+	
+	
+	exec FreightReconciliation_SendEmail @email_from,@message,@created_by,@subject
+
+end*/
+
+------Insert data into gadgets
+DECLARE @strDesc varchar(255),@GroupName VARCHAR(50),@RefURL VARCHAR(255),@RaisedByGroupName VARCHAR(50),@IsRaisedByGroup BIT,@RaisedBy_GroupID INT
+SET @strDesc=''
+SET @GroupName=''
+SET @RefURL=''
+SET @RaisedByGroupName=''
+SET @IsRaisedByGroup=0
+SET @RaisedBy_GroupID=0
+
+	select @carrier=carrier_code_name from c_carrier_codes where carrier_code_Idx=(select top 1 CarrierShipment_id from freight_reconciliation_bills where freight_bill_id=@freight_bill_id and bol_no=@bol_no)
+IF (@bill_status=3)---Pending
+BEGIN
+	IF(@hold=1)
+	BEGIN
+		SET @strDesc='Invoice Hold: ' +LTRIM(RTRIM( CAST(ISNULL(@carrier,'') AS VARCHAR) ))+ ' Invoice PRO# ' +CAST( ISNULL(@pro_no,'')  AS VARCHAR) + ' suspended : Accounting Hold'
+		SET @GroupName='Accounting'
+		SET @RefURL='FreightReconciliation/FreightBillReview.aspx?FreightBillId=' + cast(isnull(@freight_bill_id,'') as varchar)
+		EXEC Freight_Reconcillation_InsertGadgetData @freight_bill_id,@strDesc,@GroupName,@created_by,@RefURL,@IsRaisedByGroup
+	END
+	ELSE
+	BEGIN
+		SET @strDesc='Review Required: ' +LTRIM(RTRIM(CAST(ISNULL(@carrier,'') AS VARCHAR) ))+ ' Invoice PRO# ' +CAST(ISNULL(@pro_no,'') AS VARCHAR)+ ' suspended for: Variance from Estimate'
+		SET @GroupName='Shipping'
+		SET @RefURL='FreightReconciliation/FreightBillReview.aspx?FreightBillId=' + cast(isnull(@freight_bill_id,'') as varchar)
+		SET @IsRaisedByGroup=1
+		SELECT @RaisedBy_GroupID=GroupID FROM groups WHERE Name='Accounting'
+		EXEC Freight_Reconcillation_InsertGadgetData @freight_bill_id,@strDesc,@GroupName,@RaisedBy_GroupID,@RefURL,@IsRaisedByGroup
+	END
+END
+
+DROP TABLE #tempMultiLegs
+--Select 1 'StatusInfo'
+
+End
+GO
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO

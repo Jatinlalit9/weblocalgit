@@ -1,0 +1,2864 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37890141-A635-40DE-95DF-C00FD55C055E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UAL.Web</RootNamespace>
+    <AssemblyName>UAL.Web</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Framework.ApplicationServices.ErrorLogger">
+      <HintPath>..\DLL\Framework.ApplicationServices.ErrorLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.BusinessServices">
+      <HintPath>..\DLL\Framework.BusinessServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Controls">
+      <HintPath>..\DLL\Framework.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DBServices">
+      <HintPath>..\DLL\Framework.DBServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.Shared.v5.1, Version=5.1.20051.37, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics.WebUI.Shared.v5.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebGrid.v5.1, Version=5.1.20051.37, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics.WebUI.UltraWebGrid.v5.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebNavigator.v5.1, Version=5.1.20051.37, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics.WebUI.UltraWebNavigator.v5.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.WebDataInput.v5.1, Version=5.1.20051.37, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics.WebUI.WebDataInput.v5.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.WebDateChooser.v5.1, Version=5.1.20051.37, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics.WebUI.WebDateChooser.v5.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client">
+      <HintPath>C:\Program Files\AppFabric 1.1 for Windows Server\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core">
+      <HintPath>C:\Program Files\AppFabric 1.1 for Windows Server\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UAL.AlloyMaintenance">
+      <HintPath>..\DLL\UAL.AlloyMaintenance.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.ApplicationServices, Version=2.0.0.1, Culture=neutral, PublicKeyToken=40ba1c28f0501637, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\UAL.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.ApplicationServices.Interfaces">
+      <HintPath>..\DLL\UAL.ApplicationServices.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.ApplicationServices.Security.Authorization">
+      <HintPath>..\DLL\UAL.ApplicationServices.Security.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Audittrail">
+      <HintPath>..\DLL\UAL.Audittrail.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Authentication">
+      <HintPath>..\DLL\UAL.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Common">
+      <HintPath>..\DLL\UAL.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Constants">
+      <HintPath>..\DLL\UAL.Constants.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.EndUseMaintenance">
+      <HintPath>..\DLL\UAL.EndUseMaintenance.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Gadgets, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BLL\UAL.Gadgets\bin\Debug\UAL.Gadgets.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.MachineMaintenance">
+      <HintPath>..\DLL\UAL.MachineMaintenance.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Menu.Admin">
+      <HintPath>..\DLL\UAL.Menu.Admin.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.PageHandler">
+      <HintPath>..\DLL\UAL.PageHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Preferences">
+      <HintPath>..\DLL\UAL.Preferences.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.UserManagement">
+      <HintPath>..\DLL\UAL.UserManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="UAL.Web.CustomControls, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\UAL.Web.CustomControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonControls\DualList.ascx.cs">
+      <DependentUpon>DualList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\History.ascx.cs">
+      <DependentUpon>History.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\MenuList.ascx.cs">
+      <DependentUpon>MenuList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\NewHistory.ascx.cs">
+      <DependentUpon>NewHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\NewHistory.ascx.designer.cs">
+      <DependentUpon>NewHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\NewHistoryIntermediate.aspx.cs">
+      <DependentUpon>NewHistoryIntermediate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\NewHistoryIntermediate.aspx.designer.cs">
+      <DependentUpon>NewHistoryIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\RegRangeValidator.cs" />
+    <Compile Include="CommonControls\TriList.ascx.cs">
+      <DependentUpon>TriList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\FileDownload.aspx.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\FileDownloadTimer.aspx.cs">
+      <DependentUpon>FileDownloadTimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardModules.aspx.cs">
+      <DependentUpon>DashBoardModules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoardModules.aspx.designer.cs">
+      <DependentUpon>DashBoardModules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardShowHide.aspx.cs">
+      <DependentUpon>DashBoardShowHide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoardShowHide.aspx.designer.cs">
+      <DependentUpon>DashBoardShowHide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultAccounts.aspx.cs">
+      <DependentUpon>DefaultAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultApp.aspx.cs">
+      <DependentUpon>DefaultApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultCredit.aspx.cs">
+      <DependentUpon>DefaultCredit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultCredit.aspx.designer.cs">
+      <DependentUpon>DefaultCredit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultMaterialManager.aspx.cs">
+      <DependentUpon>DefaultMaterialManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultMaterialManager.aspx.designer.cs">
+      <DependentUpon>DefaultMaterialManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultMaterialPurchasing.aspx.cs">
+      <DependentUpon>DefaultMaterialPurchasing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultPlanning.aspx.cs">
+      <DependentUpon>DefaultPlanning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultProcessGroup.aspx.cs">
+      <DependentUpon>DefaultProcessGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultRejectShipment.aspx.cs">
+      <DependentUpon>DefaultRejectShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultRejectShipment.aspx.designer.cs">
+      <DependentUpon>DefaultRejectShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultReports.aspx.cs">
+      <DependentUpon>DefaultReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultSalesServices.aspx.cs">
+      <DependentUpon>DefaultSalesServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultScheduling.aspx.cs">
+      <DependentUpon>DefaultScheduling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultSecurity.aspx.cs">
+      <DependentUpon>DefaultSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultShipping.aspx.cs">
+      <DependentUpon>DefaultShipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultShopFloor.aspx.cs">
+      <DependentUpon>DefaultShopFloor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultTechService.aspx.cs">
+      <DependentUpon>DefaultTechService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultTollingManager.aspx.cs">
+      <DependentUpon>DefaultTollingManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultTollingManager.aspx.designer.cs">
+      <DependentUpon>DefaultTollingManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorHandling\DefaultError.aspx.cs">
+      <DependentUpon>DefaultError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GadgetControl.ascx.cs">
+      <DependentUpon>GadgetControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GadgetControl.ascx.designer.cs">
+      <DependentUpon>GadgetControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntermediateMenuBar.aspx.cs">
+      <DependentUpon>IntermediateMenuBar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntermediateMenuBar.aspx.designer.cs">
+      <DependentUpon>IntermediateMenuBar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LookupMaintenance\CategoryAccess.aspx.cs">
+      <DependentUpon>CategoryAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LookupMaintenance\CategoryMaintenance.aspx.cs">
+      <DependentUpon>CategoryMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LookupMaintenance\LookUpCategories.aspx.cs">
+      <DependentUpon>LookUpCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LookupMaintenance\LookupHistory.aspx.cs">
+      <DependentUpon>LookupHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LookupMaintenance\LookUps.aspx.cs">
+      <DependentUpon>LookUps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LookupMaintenance\RightMenu\RightCategoryMenu.ascx.cs">
+      <DependentUpon>RightCategoryMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\AnodizeThicknessCap.aspx.cs">
+      <DependentUpon>AnodizeThicknessCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Controls\FurnancePrograms.ascx.cs">
+      <DependentUpon>FurnancePrograms.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Controls\MachineHeaderControl.ascx.cs">
+      <DependentUpon>MachineHeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\CutToLength.aspx.cs">
+      <DependentUpon>CutToLength.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\DefaultMachine.aspx.cs">
+      <DependentUpon>DefaultMachine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\FurnaceDerivedStandards.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FurnaceDerivedStandards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\FurnaceDerivedStandards.aspx.designer.cs">
+      <DependentUpon>FurnaceDerivedStandards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\FurnaceStandards.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FurnaceStandards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\FurnaceStandards.aspx.designer.cs">
+      <DependentUpon>FurnaceStandards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\FurnancePrograms.aspx.cs">
+      <DependentUpon>FurnancePrograms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Levelling.aspx.cs">
+      <DependentUpon>Levelling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\MachineHistory.aspx.cs">
+      <DependentUpon>MachineHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\McFunctions.cs" />
+    <Compile Include="MachineMaintenance\MillRoller.aspx.cs">
+      <DependentUpon>MillRoller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\MillsMaterialLoss.aspx.cs">
+      <DependentUpon>MillsMaterialLoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\MillsMaterialLoss.aspx.designer.cs">
+      <DependentUpon>MillsMaterialLoss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\PainterCoatingCap.aspx.cs">
+      <DependentUpon>PainterCoatingCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Paints.aspx.cs">
+      <DependentUpon>Paints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SetUpHandlingTime.aspx.cs">
+      <DependentUpon>SetUpHandlingTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SetUpHandlingTime.aspx.designer.cs">
+      <DependentUpon>SetUpHandlingTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SetUpHandlingTimeForMill.aspx.cs">
+      <DependentUpon>SetUpHandlingTimeForMill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SetUpHandlingTimeForMill.aspx.designer.cs">
+      <DependentUpon>SetUpHandlingTimeForMill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterCoating.aspx.cs">
+      <DependentUpon>SlitterCoating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterCoreMaterial.aspx.cs">
+      <DependentUpon>SlitterCoreMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterGauge.aspx.cs">
+      <DependentUpon>SlitterGauge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterInnerDiaCap.aspx.cs">
+      <DependentUpon>SlitterInnerDiaCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterMaterialLoss.aspx.cs">
+      <DependentUpon>SlitterMaterialLoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterMaterialLoss.aspx.designer.cs">
+      <DependentUpon>SlitterMaterialLoss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SlitterNoOfCut.aspx.cs">
+      <DependentUpon>SlitterNoOfCut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Speed.aspx.cs">
+      <DependentUpon>Speed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\Speed.aspx.designer.cs">
+      <DependentUpon>Speed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SpeedForMill.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SpeedForMill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SpeedForMill.aspx.designer.cs">
+      <DependentUpon>SpeedForMill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SpeedForMillIntermediate.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SpeedForMillIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SpeedForMillIntermediate.aspx.designer.cs">
+      <DependentUpon>SpeedForMillIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SpeedIntermediate.aspx.cs">
+      <DependentUpon>SpeedIntermediate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MachineMaintenance\SpeedIntermediate.aspx.designer.cs">
+      <DependentUpon>SpeedIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MachineMaintenance\SubContractorCoilAbility.aspx.cs">
+      <DependentUpon>SubContractorCoilAbility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\application_access.aspx.cs">
+      <DependentUpon>application_access.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\application_access_details.aspx.cs">
+      <DependentUpon>application_access_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\ctlKeyPad.ascx.cs">
+      <DependentUpon>ctlKeyPad.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\ctlKeyPad.ascx.designer.cs">
+      <DependentUpon>ctlKeyPad.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\ctl_permission.ascx.cs">
+      <DependentUpon>ctl_permission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\ctl_permission_detail.ascx.cs">
+      <DependentUpon>ctl_permission_detail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\EmployeeScheduleQualification.aspx.cs">
+      <DependentUpon>EmployeeScheduleQualification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\EmployeeScheduleQualification.aspx.designer.cs">
+      <DependentUpon>EmployeeScheduleQualification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\LogOutIntermediate.aspx.cs">
+      <DependentUpon>LogOutIntermediate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\LogOutIntermediate.aspx.designer.cs">
+      <DependentUpon>LogOutIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\mainTemp.aspx.cs">
+      <DependentUpon>mainTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\mainTemp.aspx.designer.cs">
+      <DependentUpon>mainTemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\PopUpUserResponse.aspx.cs">
+      <DependentUpon>PopUpUserResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\PopUpUserResponse.aspx.designer.cs">
+      <DependentUpon>PopUpUserResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\SupervisiorLogin.aspx.cs">
+      <DependentUpon>SupervisiorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\SupervisiorLogin.aspx.designer.cs">
+      <DependentUpon>SupervisiorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\ConvertToDatatable.cs" />
+    <Compile Include="Template\CustomToolTip.ascx.cs">
+      <DependentUpon>CustomToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\DataSetSurrogate.cs" />
+    <Compile Include="Template\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\MenuBar.ascx.cs">
+      <DependentUpon>MenuBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\PageFooter.ascx.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\PageHeader.ascx.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\PageTemplate.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\SmartScroll.ascx.cs">
+      <DependentUpon>SmartScroll.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonControls\DualList.ascx.resx">
+      <DependentUpon>DualList.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\History.ascx.resx">
+      <DependentUpon>History.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\MenuList.ascx.resx">
+      <DependentUpon>MenuList.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControls\TriList.ascx.resx">
+      <DependentUpon>TriList.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonPages\FileDownload.aspx.resx">
+      <DependentUpon>FileDownload.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonPages\FileDownloadTimer.aspx.resx">
+      <DependentUpon>FileDownloadTimer.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="default.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultAccounts.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultApp.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultMaterialPurchasing.aspx.resx">
+      <DependentUpon>DefaultMaterialPurchasing.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultPlanning.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultProcessGroup.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultReports.aspx.resx">
+      <DependentUpon>DefaultReports.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultSalesServices.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultScheduling.aspx.resx">
+      <DependentUpon>DefaultScheduling.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultSecurity.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultShipping.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultShopFloor.aspx.resx">
+      <DependentUpon>DefaultShopFloor.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultTechService.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorHandling\DefaultError.aspx.resx">
+      <DependentUpon>DefaultError.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Help.aspx.resx">
+      <DependentUpon>Help.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupMaintenance\CategoryAccess.aspx.resx">
+      <DependentUpon>CategoryAccess.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupMaintenance\CategoryMaintenance.aspx.resx">
+      <DependentUpon>CategoryMaintenance.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupMaintenance\LookUpCategories.aspx.resx">
+      <DependentUpon>LookUpCategories.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupMaintenance\LookupHistory.aspx.resx">
+      <DependentUpon>LookupHistory.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupMaintenance\LookUps.aspx.resx">
+      <DependentUpon>LookUps.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupMaintenance\RightMenu\RightCategoryMenu.ascx.resx">
+      <DependentUpon>RightCategoryMenu.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\AnodizeThicknessCap.aspx.resx">
+      <DependentUpon>AnodizeThicknessCap.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\Controls\FurnancePrograms.ascx.resx">
+      <DependentUpon>FurnancePrograms.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\Controls\MachineHeaderControl.ascx.resx">
+      <DependentUpon>MachineHeaderControl.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\CutToLength.aspx.resx">
+      <DependentUpon>CutToLength.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\DefaultMachine.aspx.resx">
+      <DependentUpon>DefaultMachine.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\FurnancePrograms.aspx.resx">
+      <DependentUpon>FurnancePrograms.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\Levelling.aspx.resx">
+      <DependentUpon>Levelling.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\MachineHistory.aspx.resx">
+      <DependentUpon>MachineHistory.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\Main.aspx.resx">
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\MillRoller.aspx.resx">
+      <DependentUpon>MillRoller.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\PainterCoatingCap.aspx.resx">
+      <DependentUpon>PainterCoatingCap.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\Paints.aspx.resx">
+      <DependentUpon>Paints.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\SlitterCoating.aspx.resx">
+      <DependentUpon>SlitterCoating.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\SlitterCoreMaterial.aspx.resx">
+      <DependentUpon>SlitterCoreMaterial.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\SlitterGauge.aspx.resx">
+      <DependentUpon>SlitterGauge.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\SlitterInnerDiaCap.aspx.resx">
+      <DependentUpon>SlitterInnerDiaCap.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\SlitterNoOfCut.aspx.resx">
+      <DependentUpon>SlitterNoOfCut.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineMaintenance\SubContractorCoilAbility.aspx.resx">
+      <DependentUpon>SubContractorCoilAbility.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\AccessDenied.aspx.resx">
+      <DependentUpon>AccessDenied.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\application_access.aspx.resx">
+      <DependentUpon>application_access.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\application_access_details.aspx.resx">
+      <DependentUpon>application_access_details.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\ChangePassword.aspx.resx">
+      <DependentUpon>ChangePassword.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\ctl_permission.ascx.resx">
+      <DependentUpon>ctl_permission.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\ctl_permission_detail.ascx.resx">
+      <DependentUpon>ctl_permission_detail.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\login.aspx.resx">
+      <DependentUpon>login.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\logout.aspx.resx">
+      <DependentUpon>logout.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\CustomToolTip.ascx.resx">
+      <DependentUpon>CustomToolTip.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Footer.ascx.resx">
+      <DependentUpon>Footer.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Header.ascx.resx">
+      <DependentUpon>Header.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\MenuBar.ascx.resx">
+      <DependentUpon>MenuBar.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\PageFooter.ascx.resx">
+      <DependentUpon>PageFooter.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\PageHeader.ascx.resx">
+      <DependentUpon>PageHeader.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\SmartScroll.ascx.resx">
+      <DependentUpon>SmartScroll.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TermsAndConditions.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.aspx" />
+    <Content Include="DefaultAccounts.aspx" />
+    <Content Include="DefaultApp.aspx" />
+    <Content Include="DefaultPlanning.aspx" />
+    <Content Include="DefaultProcessGroup.aspx" />
+    <Content Include="DefaultSalesServices.aspx" />
+    <Content Include="DefaultSecurity.aspx" />
+    <Content Include="DefaultShipping.aspx" />
+    <Content Include="DefaultTechService.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Reports.aspx" />
+    <Content Include="TermsAndConditions.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonControls\DualList.ascx" />
+    <Content Include="CommonControls\History.ascx" />
+    <Content Include="CommonControls\MenuList.ascx" />
+    <Content Include="CommonControls\TriList.ascx" />
+    <Content Include="CommonPages\FileDownload.aspx" />
+    <Content Include="CommonPages\FileDownloadTimer.aspx" />
+    <Content Include="CSS\UAL1.css" />
+    <Content Include="ErrorHandling\DefaultError.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Help\Help.aspx" />
+    <Content Include="JScripts\Common.js" />
+    <Content Include="JScripts\Infragistics\HM_Loader.js" />
+    <Content Include="JScripts\Infragistics\HM_ScriptDOM.js" />
+    <Content Include="JScripts\Infragistics\HM_ScriptIE4.js" />
+    <Content Include="JScripts\Infragistics\HM_ScriptNS4.js" />
+    <Content Include="JScripts\Infragistics\ig_calendar.js" />
+    <Content Include="JScripts\Infragistics\ig_csom.js" />
+    <Content Include="JScripts\Infragistics\ig_edit.js" />
+    <Content Include="JScripts\Infragistics\ig_mask.js" />
+    <Content Include="JScripts\Infragistics\ig_wbgWrapper.xslt" />
+    <Content Include="JScripts\Infragistics\ig_webchart.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_browser.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_crosshair.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_eventpayload.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_scrollbar.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_windowviewer.js" />
+    <Content Include="JScripts\Infragistics\ig_webcombo3_1.js" />
+    <Content Include="JScripts\Infragistics\ig_WebDropDown.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid.xslt" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_an.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_dl.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_dom.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ft.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_gb.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ie.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ie6.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_kb.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ml.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_nn.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ro.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ro2.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_srt.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_xml.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbar2_2.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbarASC.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbarIE4.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbarNS4.js" />
+    <Content Include="JScripts\Infragistics\ig_webmenu.js" />
+    <Content Include="JScripts\Infragistics\ig_WebNavBar.js" />
+    <Content Include="JScripts\Infragistics\ig_webschedule.js" />
+    <Content Include="JScripts\Infragistics\ig_webtab.js" />
+    <Content Include="JScripts\Infragistics\ig_webtoolbar2_2.js" />
+    <Content Include="LookupMaintenance\CategoryAccess.aspx" />
+    <Content Include="LookupMaintenance\CategoryMaintenance.aspx" />
+    <Content Include="LookupMaintenance\LookUpCategories.aspx" />
+    <Content Include="LookupMaintenance\LookupHistory.aspx" />
+    <Content Include="LookupMaintenance\LookUps.aspx" />
+    <Content Include="LookupMaintenance\RightMenu\RightCategoryMenu.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LookupMaintenance\Web.config" />
+    <Content Include="MachineMaintenance\AnodizeThicknessCap.aspx" />
+    <Content Include="MachineMaintenance\Controls\FurnancePrograms.ascx" />
+    <Content Include="MachineMaintenance\Controls\MachineHeaderControl.ascx" />
+    <Content Include="MachineMaintenance\CutToLength.aspx" />
+    <Content Include="MachineMaintenance\DefaultMachine.aspx" />
+    <Content Include="MachineMaintenance\FurnancePrograms.aspx" />
+    <Content Include="MachineMaintenance\Levelling.aspx" />
+    <Content Include="MachineMaintenance\MachineHistory.aspx" />
+    <Content Include="MachineMaintenance\Main.aspx" />
+    <Content Include="MachineMaintenance\MillRoller.aspx" />
+    <Content Include="MachineMaintenance\PainterCoatingCap.aspx" />
+    <Content Include="MachineMaintenance\Paints.aspx" />
+    <Content Include="MachineMaintenance\SlitterCoating.aspx" />
+    <Content Include="MachineMaintenance\SlitterCoreMaterial.aspx" />
+    <Content Include="MachineMaintenance\SlitterGauge.aspx" />
+    <Content Include="MachineMaintenance\SlitterInnerDiaCap.aspx" />
+    <Content Include="MachineMaintenance\SlitterNoOfCut.aspx" />
+    <Content Include="MachineMaintenance\SubContractorCoilAbility.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonControls\NewHistory.ascx" />
+    <Content Include="CommonControls\NewHistoryIntermediate.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="DashBoardModules.aspx" />
+    <Content Include="DashBoardShowHide.aspx" />
+    <Content Include="DefaultCredit.aspx" />
+    <Content Include="DefaultMaterialManager.aspx" />
+    <Content Include="DefaultMaterialPurchasing.aspx" />
+    <Content Include="DefaultRejectShipment.aspx" />
+    <Content Include="DefaultReports.aspx" />
+    <Content Include="DefaultScheduling.aspx" />
+    <Content Include="DefaultShopFloor.aspx" />
+    <Content Include="DefaultTollingManager.aspx" />
+    <Content Include="GadgetControl.ascx" />
+    <Content Include="Images\Theme_1\AlloyMaintenance\Buttons\btn_copy_std.gif" />
+    <Content Include="Images\Theme_1\AlloyMaintenance\Buttons\btn_copy_std_down.gif" />
+    <Content Include="Images\Theme_1\AlloyMaintenance\Buttons\copy_vendor.gif" />
+    <Content Include="Images\Theme_1\AlloyMaintenance\Buttons\copy_vendor_over.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_annealcycle.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_annealcycle_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_element_limits.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_element_limits_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_end2.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_ksi_data.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_ksi_data_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_mech.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_mech_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_properties.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_properties_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_reduction_rules.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_reduction_rules_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_vendoro.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_vendoro_down.gif" />
+    <Content Include="Images\Theme_1\bottomborder.gif" />
+    <Content Include="Images\Theme_1\bottomleftcorner.gif" />
+    <Content Include="Images\Theme_1\bottomrightcorner.gif" />
+    <Content Include="Images\Theme_1\btn_left.gif" />
+    <Content Include="Images\Theme_1\btn_left_down.gif" />
+    <Content Include="Images\Theme_1\btn_left_small.gif" />
+    <Content Include="Images\Theme_1\btn_right.gif" />
+    <Content Include="Images\Theme_1\btn_right_down.gif" />
+    <Content Include="Images\Theme_1\btn_right_small.gif" />
+    <Content Include="Images\Theme_1\btn_tile.gif" />
+    <Content Include="Images\Theme_1\btn_tile_down.gif" />
+    <Content Include="Images\Theme_1\btn_tile_small.gif" />
+    <Content Include="Images\Theme_1\channelleftborder.gif" />
+    <Content Include="Images\Theme_1\channelrightborder.gif" />
+    <Content Include="Images\Theme_1\channeltopborder.gif" />
+    <Content Include="Images\Theme_1\channeltopleft.gif" />
+    <Content Include="Images\Theme_1\channeltopright.gif" />
+    <Content Include="Images\Theme_1\clear.gif" />
+    <Content Include="Images\Theme_1\clear_over.gif" />
+    <Content Include="Images\Theme_1\close.gif" />
+    <Content Include="Images\Theme_1\close_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_alloy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_element.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_element_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_machine.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_machine_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_catogory.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_catogory_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_layer.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_layer_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_orders.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_orders_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\a_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\a_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\back.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\back_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_category.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_category_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_new_lookup.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_new_lookup_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_back.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_back_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_edit.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_edit_dis.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_edit_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_exclude.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_exclude_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_include.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_include_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_category.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_category_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_lookup.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_lookup_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewcat.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewcat_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewlook.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewlook_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_view_graph.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_view_graph_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\busy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\b_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\b_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\cancel.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\cancel_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\copy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Copy_new_IQR.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Copy_new_IQR_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\copy_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\curve_left_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\curve_right_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\c_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\c_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\details.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\details_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\d_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\d_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\edit2.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\e_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\e_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\fill_details.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\fill_details_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\f_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\f_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\g_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\g_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\h_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\h_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_cancel.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_change_password.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_delete.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_edit.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_email.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_first.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_history.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_next.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_null.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_pdf.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_popup.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_prev.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_print.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_save.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_tick.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_view.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_view2.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\add_row.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\add_row_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\attach_file.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\attach_file_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\btn_delete_selected.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\btn_delete_selected_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_existing_temp.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_existing_temp_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_prev_rej_IQR.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_prev_rej_IQR_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\Copy_new_IQR.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\Copy_new_IQR_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\copy_to_new_iqr.GIF" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\copy_to_new_iqr_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\no_quote.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\no_quote_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\routeandcopy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\routeandcopy_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\saveandroute.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\saveandroute_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\save_addnewrow.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\save_addnewrow_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_process.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_process_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_temp.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_temp_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\i_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\i_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\j_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\j_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\k_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\k_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\l_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\l_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\m_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\m_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new_alias.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new_alias_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\n_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\n_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Open_orders.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Open_orders_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\o_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\o_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\p_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\p_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\quotes.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\quotes_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\q_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\q_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\reset.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\reset_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\r_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\r_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_add.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_add_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_and_add_new_element.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_and_add_new_element_ov.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\s_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\s_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\tab_history.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\tab_history_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\t_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\t_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\upload.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\upload_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\u_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\u_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\v_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\v_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\w_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\w_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\x_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\x_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\y_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\y_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\z_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\z_on_12.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add_new.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add_new_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\back.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\backtoIqr.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\backtoIqr_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\back_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_accounting_info.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_accounting_info_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_add_new_category.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_add_new_category_dis.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_add_new_category_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_add_new_sub_category.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_add_new_sub_category_dis.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_add_new_sub_category_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_continue.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_continue_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_copy.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_copy_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_delete.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_delete_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_exclude.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_exclude_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_export2excel.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_export2excel_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_generate_rep.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_generate_rep_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_go.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_history.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_history_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_include.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_include_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_ok.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_ok_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_print.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_printrep.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_printrep_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_print_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_refresh.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_refresh_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_shipping_info.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_shipping_info_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\cancel.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\cancel_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\clear.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\clear_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\close.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\close_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\edit2.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_add.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_add_new_01.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_arrow.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_arrow_left.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_cancel.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_change_password.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_delete.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_delete_new.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_edit.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_min.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_next.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_plus.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_popup.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_prev.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_printer.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_save.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_save_new.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_tick.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_undo.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_view.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_view2.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortAsc.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortAsc_White.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortDesc.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortDesc_White.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\next_up.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\no.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\no_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\prev_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\reset.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\reset_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\right_menu_left.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_add.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_add_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_dis.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\search.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\search_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\tabs_tile.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\tab_end2.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\yes.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\yes_over.gif" />
+    <Content Include="Images\Theme_1\Common\Tabs\tab_history.gif" />
+    <Content Include="Images\Theme_1\Common\Tabs\tab_history_down.gif" />
+    <Content Include="Images\Theme_1\DEPReports\btn_monthly.gif" />
+    <Content Include="Images\Theme_1\DEPReports\btn_monthly_down.gif" />
+    <Content Include="Images\Theme_1\DEPReports\btn_retrieve.gif" />
+    <Content Include="Images\Theme_1\DEPReports\btn_retrieve_down.gif" />
+    <Content Include="Images\Theme_1\DEPReports\btn_yearly.gif" />
+    <Content Include="Images\Theme_1\DEPReports\btn_yearly_down.gif" />
+    <Content Include="Images\Theme_1\DEPReports\icon_checkbox_1.gif" />
+    <Content Include="Images\Theme_1\DEPReports\icon_checkbox_2.gif" />
+    <Content Include="Images\Theme_1\DEPReports\icon_emissions.gif" />
+    <Content Include="Images\Theme_1\DEPReports\icon_exit.gif" />
+    <Content Include="Images\Theme_1\EndUse\icon_tick.gif" />
+    <Content Include="Images\Theme_1\fill_details.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_add_more.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_add_more_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_add_new_prog.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_add_new_prog_dis.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_add_new_prog_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_cancel.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_cancel_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_clear.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_clear_dis.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_clear_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_copy.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_copy_dis.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_copy_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_edit.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_edit_dis.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_edit_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_go.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_go_dis.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_go_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_reset.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_reset_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_save.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\btn_save_down.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\go.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\go_over.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\icon_cross.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\icon_delete.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\icon_delete_dis.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\icon_excel.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\icon_print.gif" />
+    <Content Include="Images\Theme_1\FurnacePrograms\Buttons\icon_tick.gif" />
+    <Content Include="Images\Theme_1\headerbottomborder.gif" />
+    <Content Include="Images\Theme_1\headerbottomleft.gif" />
+    <Content Include="Images\Theme_1\headerbottomright.gif" />
+    <Content Include="Images\Theme_1\headerleftborder.gif" />
+    <Content Include="Images\Theme_1\headerrightborder.gif" />
+    <Content Include="Images\Theme_1\home.gif" />
+    <Content Include="Images\Theme_1\icon_calendar.gif" />
+    <Content Include="Images\Theme_1\icon_help.gif" />
+    <Content Include="Images\Theme_1\icon_plus.gif" />
+    <Content Include="Images\Theme_1\ig_edit_0b.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueDown.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueDown_disabled.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueUp.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueUp_disabled.gif" />
+    <Content Include="Images\Theme_1\img_tile_background.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_approvalstatus.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_approvalstatus_down.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_end2.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_mech_tensile_limits.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_mech_tensile_limits_down.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_orderdetails.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_orderdetails_down.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_part_product_details.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_part_product_details_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\add_row.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\add_row_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\all_orders.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\all_orders_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\attach_file.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\attach_file_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_add.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_add_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_back_search_results.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_back_search_results_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_back_to_iqr.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_back_to_iqr_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_check_existing.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_check_existing_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_delete_selected.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_delete_selected_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_edit_iqr.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_edit_iqr_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_reject_iqr.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_reject_iqr_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_remove.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_remove_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_reroute_with_suggested_tolerances.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_reroute_with_suggested_tolerances_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_save_&amp;_route_with_suggested_tol.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_save_&amp;_route_with_suggested_tol_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_save_reject.GIF" />
+    <Content Include="Images\Theme_1\IQR\Buttons\btn_save_reject._over.GIF" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_existing_temp.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_existing_temp_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_prev_rej_IQR.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_prev_rej_IQR_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\Copy_new_IQR.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\Copy_new_IQR_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\copy_to_new_iqr.GIF" />
+    <Content Include="Images\Theme_1\IQR\Buttons\copy_to_new_iqr_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\next.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\next_dis.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\next_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\no_quote.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\no_quote_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\Open_orders.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\Open_orders_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\previous.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\previous_dis.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\previous_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\quotes.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\quotes_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\routeandcopy.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\routeandcopy_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\saveandroute.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\saveandroute_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\save_addnewrow.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\save_addnewrow_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\setup_new_temp.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\setup_new_temp_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\void.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\void_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_approvalstatus.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_approvalstatus_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_end2.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_mech_tensile_limits.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_orderdetails.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_orderdetails_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_part_product_details.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_part_product_details_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_properties.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_properties_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_tolling.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_tolling_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_checkall.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_checkall_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_clear_all.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_clear_all_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_alt_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_alt_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_new_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_new_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_create_alternate_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_create_alternate_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_edit.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_edit_dis.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_hide_inactive.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_hide_inactive_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_history.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_history_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_new_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_new_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_nexttab.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_nexttab_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_show_all.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_show_all_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\continue_editing_pro.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\continue_editing_pro_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\copy_a_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\copy_a_process_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\Copy_process_newtemp.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\Copy_process_newtemp_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\create_pro_scratch.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\create_pro_scratch_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\edit_pro.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\edit_pro_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\go.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\go_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\insert_row_below.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\summary_view.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\summary_view_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_approvalstatus.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_approvalstatus_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_chem.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_chem_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_chem_down_des.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_itemspecifications.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_itemspecifications_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_part_product_details.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_part_product_details_des.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_part_product_details_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_processes.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_processes_des.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_processes_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_properties.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_properties_des.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_properties_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_tolling.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_tolling_down.gif" />
+    <Content Include="Images\Theme_1\login.gif" />
+    <Content Include="Images\Theme_1\login_over.gif" />
+    <Content Include="Images\Theme_1\logout.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_category.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_category_down.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_new_lookup.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_new_lookup_down.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_category.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_category_down.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_lookup.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_lookup_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Buttons\add_machine.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Buttons\add_machine_over.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_ano_thick_cap.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_ano_thick_cap_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating_thick.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating_thick_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coil_receiving.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coil_receiving_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_corematerial.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_corematerial_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_cutlength.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_cutlength_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_furnacepro.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_furnacepro_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_guage.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_guage_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_inner_dia.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_inner_dia_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_leveling.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_leveling_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_main.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_main_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_no_cuts.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_no_cuts_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_paints.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_paints_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_roll_finish.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_roll_finish_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating_thick.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating_thick_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coil_receiving.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coil_receiving_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_corematerial.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_corematerial_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_cutlength.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_cutlength_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_furnacepro.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_furnacepro_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_guage.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_guage_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_inner_dia.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_inner_dia_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_leveling.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_leveling_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_main.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_main_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_no_cuts.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_no_cuts_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_paints.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_paints_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_rollertype.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_rollertype_down.gif" />
+    <Content Include="Images\Theme_1\mainlogo.gif" />
+    <Content Include="Images\Theme_1\menuSeperator.gif" />
+    <Content Include="Images\Theme_1\next_up.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_coils_count.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_coils_count_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_new_coil.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_new_coil_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_skids.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_skids_count.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_skids_count_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_skids_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_skids_not_on_count_sheet.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_add_skids_not_on_count_sheet_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_coils.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_coils_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_coils_sheet.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_coils_sheet_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_skids.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_skids_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_skids_sheet.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_audit_skids_sheet_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_generate_count.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_generate_count_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_in_process_physical.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_in_process_physical_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_scrap_alloy.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_scrap_alloy_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_sow_and_outside.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_sow_and_outside_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_update_coils_counted.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_update_coils_counted_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_update_scraps_on_count_sheet.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_update_scraps_on_count_sheet_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_view_count_sheets.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\btn_view_count_sheets_down.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\go.gif" />
+    <Content Include="Images\Theme_1\PhysicalInventory\Buttons\go_over.gif" />
+    <Content Include="Images\Theme_1\prev_down.gif" />
+    <Content Include="Images\Theme_1\RerollShippingInfo\Buttons\btn_return_to_search.gif" />
+    <Content Include="Images\Theme_1\RerollShippingInfo\Buttons\btn_return_to_search_down.gif" />
+    <Content Include="Images\Theme_1\RerollShippingInfo\Buttons\btn_reviewtest.gif" />
+    <Content Include="Images\Theme_1\RerollShippingInfo\Buttons\btn_reviewtest_down.gif" />
+    <Content Include="Images\Theme_1\RerollShippingInfo\Buttons\go.gif" />
+    <Content Include="Images\Theme_1\RerollShippingInfo\Buttons\go_over.gif" />
+    <Content Include="Images\Theme_1\reset.gif" />
+    <Content Include="Images\Theme_1\right_menu_left.gif" />
+    <Content Include="Images\Theme_1\save.gif" />
+    <Content Include="Images\Theme_1\save_over.gif" />
+    <Content Include="Images\Theme_1\search.gif" />
+    <Content Include="Images\Theme_1\search_over.gif" />
+    <Content Include="Images\Theme_1\Selected_bgimg_EndUse.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_all_details.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_all_details_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_back_shipment.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_back_shipment_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_back_to_pick_list.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_back_to_pick_list_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_delete_selected_order.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_delete_selected_order_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_edit_selected_order.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_edit_selected_order_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_find.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_find_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_instruction.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_next_release.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_next_release_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_other_order.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_other_order_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_bill_of_landing.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_bill_of_landing_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_ship_memos.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_ship_memos_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_skid_pick_list.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_skid_pick_list_do.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_print_skid_pick_list_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_remove_sel_order.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_remove_sel_order_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_remove_shipment.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_remove_shipment_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_reprint.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_reprint_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_retrieve.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_retrieve_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_ship_memo.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_ship_memo_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_txt_all.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_txt_all_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_txt_carrier.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_txt_carrier_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_txt_ua.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_txt_ua_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_undo.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_undo_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_undo_last.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_undo_last_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_update_freight.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_update_freight_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_view_instr.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_view_instr_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_warehouse.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_warehouse_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_wip_details.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\btn_wip_details_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\filter.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\filter_over.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\icon_plus.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\line.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\mainlogo.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Buttons\star.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\line.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\tab_left.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\tab_left_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\tab_right.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\tab_right_down.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\tab_tile.gif" />
+    <Content Include="Images\Theme_1\ShippingPickList\Tabs\tab_tile_down.gif" />
+    <Content Include="Images\Theme_1\SideScrapAndTrim\Tabs\tab_standard_scrap.gif" />
+    <Content Include="Images\Theme_1\SideScrapAndTrim\Tabs\tab_standard_scrap_down.gif" />
+    <Content Include="Images\Theme_1\SideScrapAndTrim\Tabs\tab_standard_scrap_over.gif" />
+    <Content Include="Images\Theme_1\space.GIF" />
+    <Content Include="Images\Theme_1\SubMenuTriangle.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\add_alloy.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\add_alloy_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_assign_coil.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_assign_coil_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_attach_img_coil.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_attach_img_coil_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_comments.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_comments_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_run_check.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_run_check_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_scan_matching_alloy.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_scan_matching_alloy_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_set_restrict_use.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_set_restrict_use_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_proc_history.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_proc_history_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_restrict_use.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_restrict_use_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_viiew_proc_history.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_viiew_proc_history_over.gif" />
+    <Content Include="Images\Theme_1\tabs_tile.gif" />
+    <Content Include="Images\Theme_1\tab_history.gif" />
+    <Content Include="Images\Theme_1\tab_history_down.gif" />
+    <Content Include="Images\Theme_1\tile_bgimg_EndUse.gif" />
+    <Content Include="Images\Theme_1\topborder.gif" />
+    <Content Include="Images\Theme_1\topleftcorner.gif" />
+    <Content Include="Images\Theme_1\toprightcorner.gif" />
+    <Content Include="Images\Theme_1\transparent.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\arrow-down.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_add.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_add_all.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_blank.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_compare.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_compare_down.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_compare_ven_alloy.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_compare_ven_alloy_down.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_remove.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\btn_remove_all.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\icon_arrow.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\icon_arrow_left.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\icon_print.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\icon_printer.gif" />
+    <Content Include="Images\Theme_1\VendorQualifications\Buttons\tri-right1.gif" />
+    <Content Include="Images\Theme_1\verticalSep.GIF" />
+    <Content Include="IntermediateMenuBar.aspx" />
+    <Content Include="JScripts\Infragistics\ig_button.js" />
+    <Content Include="JScripts\Infragistics\ig_shared.js" />
+    <Content Include="JScripts\Infragistics\ig_webpanel.js" />
+    <Content Include="JScripts\Infragistics\ig_webtree.js" />
+    <Content Include="MachineMaintenance\FurnaceDerivedStandards.aspx" />
+    <Content Include="MachineMaintenance\FurnaceStandards.aspx" />
+    <Content Include="MachineMaintenance\MillsMaterialLoss.aspx" />
+    <Content Include="MachineMaintenance\SetUpHandlingTime.aspx" />
+    <Content Include="MachineMaintenance\SetUpHandlingTimeForMill.aspx" />
+    <Content Include="MachineMaintenance\SlitterMaterialLoss.aspx" />
+    <Content Include="MachineMaintenance\Speed.aspx" />
+    <Content Include="MachineMaintenance\SpeedForMill.aspx" />
+    <Content Include="MachineMaintenance\SpeedForMillIntermediate.aspx" />
+    <Content Include="MachineMaintenance\SpeedIntermediate.aspx" />
+    <Content Include="MachineMaintenance\Web.config" />
+    <Content Include="Security\AccessDenied.aspx" />
+    <Content Include="Security\application_access.aspx" />
+    <Content Include="Security\application_access_details.aspx" />
+    <Content Include="Security\ChangePassword.aspx" />
+    <Content Include="Security\ctlKeyPad.ascx" />
+    <Content Include="Security\ctl_permission.ascx" />
+    <Content Include="Security\ctl_permission_detail.ascx" />
+    <Content Include="Security\EmployeeScheduleQualification.aspx" />
+    <Content Include="Security\login.aspx" />
+    <Content Include="Security\logout.aspx" />
+    <Content Include="Security\LogOutIntermediate.aspx" />
+    <Content Include="Security\mainTemp.aspx" />
+    <Content Include="Security\PopUpUserResponse.aspx" />
+    <Content Include="Security\SupervisiorLogin.aspx" />
+    <Content Include="Template\CustomToolTip.ascx" />
+    <Content Include="Template\Footer.ascx" />
+    <Content Include="Template\Header.ascx" />
+    <Content Include="Template\MenuBar.ascx" />
+    <Content Include="Template\PageFooter.ascx" />
+    <Content Include="Template\PageHeader.ascx" />
+    <Content Include="Template\SmartScroll.ascx" />
+    <Content Include="WebHelp\AddAnAlloy.JPG" />
+    <Content Include="WebHelp\alloynew.bmp" />
+    <Content Include="WebHelp\Alloys\Adding_or_editing_an_Alloy.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles.css" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image007.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image004.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image005.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image006.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image008.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image009.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image010.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image011.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_Alloy_Anneal_Cycles_image012.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_image001.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_image002.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_image003.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_image013.gif" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_image015.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_image017.jpg" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Alloy_Anneal_Cycles_ns.css" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Delete_Furnace_program_and_reference_of_an_Anneal_Cycle.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Fields_Description1.css" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Fields_Description1.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Fields_Description1_ns.css" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Field_Description_vendor.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_add_and_edit_Reference_for_Anneal_Cycles.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_add_Vendor_O_Gauge.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_delete_Vendor_O_Gauge.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_Edit_Furnace_programs_for_Anneal_Cycle.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_edit_the_Vendor_O_Gauge.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_Set_Furnace_programs_for_Anneal_Cycle.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\How_to_View_Anneal_Cycles.htm" />
+    <Content Include="WebHelp\Alloys\AlloyAnnealCycle\Vendor_O_Gauge.htm" />
+    <Content Include="WebHelp\Alloys\Alloys.htm" />
+    <Content Include="WebHelp\Alloys\Alloys_Overview1.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\Element_Limits_Chemistry.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\Field_Dscription.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\How_Add_a_new_element_limits.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\How_to_Copy_element_limits.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\How_To_Copy_element_limits_for_the_vendor.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\How_to_delete_element_limits.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\How_to_edit_elements_limits.htm" />
+    <Content Include="WebHelp\Alloys\Elements_Limits\How_to_View_element_Limits_of_an_alloy.htm" />
+    <Content Include="WebHelp\Alloys\Help1.css" />
+    <Content Include="WebHelp\Alloys\Help1_image002.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image004.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image006.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image008.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image010.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image012.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image014.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image016.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image018.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image026.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image028.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image030.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image032.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image034.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image036.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image040.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image042.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image044.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image046.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image048.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image050.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image052.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image054.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image055.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image056.gif" />
+    <Content Include="WebHelp\Alloys\Help1_image058.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image060.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image062.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image064.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image066.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image068.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image070.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image073.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_image074.jpg" />
+    <Content Include="WebHelp\Alloys\Help1_ns.css" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_an_alloy.htm" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_a_alloy.css" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_a_alloy_image002.jpg" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_a_alloy_image003.gif" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_a_alloy_image004.jpg" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_a_alloy_image005.jpg" />
+    <Content Include="WebHelp\Alloys\How_to_Copy_a_alloy_ns.css" />
+    <Content Include="WebHelp\Alloys\How_to_view_Alloy_History.htm" />
+    <Content Include="WebHelp\Alloys\image001.png" />
+    <Content Include="WebHelp\Alloys\image002.jpg" />
+    <Content Include="WebHelp\Alloys\image003.png" />
+    <Content Include="WebHelp\Alloys\image004.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\Field_Description.htm" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData.css" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_HelpKSIData_HelpKSIData_image003.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image002.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image005.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image007.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image009.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image011.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image013.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image014.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image015.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image016.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image018.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image020.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image022.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image024.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image025.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image026.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image027.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image028.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image029.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image031.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image033.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image034.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_image036.jpg" />
+    <Content Include="WebHelp\Alloys\KSIData\HelpKSIData_ns.css" />
+    <Content Include="WebHelp\Alloys\KSIData\How_to_Add_a_Temper_for_an_alloy.htm" />
+    <Content Include="WebHelp\Alloys\KSIData\How_to_Delete_a_Temper_for_an_alloy.htm" />
+    <Content Include="WebHelp\Alloys\KSIData\How_to_Update_a_Temper_for_an_alloy.htm" />
+    <Content Include="WebHelp\Alloys\KSIData\KSI_Data.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\Field_Description.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\How_to_add_Gauge_Range.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\How_to_add_new_temper.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\How_to_Copy_Mechanical_tensile_test_limit.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\How_to_Delete_the_Mechanical_Tensile_Test_Limit.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\How_to_Edit_the_Gauge_Range.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\How_to_View_Mechanical_tensile_test_result.htm" />
+    <Content Include="WebHelp\Alloys\Mechnical_tesniletestlimits\Mechanical_Tensile_Test_Limits.htm" />
+    <Content Include="WebHelp\Alloys\Properties\Field_Description.htm" />
+    <Content Include="WebHelp\Alloys\Properties\How_to_add_an_Alloy.htm" />
+    <Content Include="WebHelp\Alloys\Properties\How_to_add_an_inherited_alloy.htm" />
+    <Content Include="WebHelp\Alloys\Properties\How_to_add_a_clad_alloy.htm" />
+    <Content Include="WebHelp\Alloys\Properties\How_to_add_a_parent_alloy.htm" />
+    <Content Include="WebHelp\Alloys\Properties\How_to_edit_an_alloy.htm" />
+    <Content Include="WebHelp\Alloys\Properties\Properties.htm" />
+    <Content Include="WebHelp\Alloys\Reductionrule\Field_Description.htm" />
+    <Content Include="WebHelp\Alloys\Reductionrule\How_to_upload_reduction_rules.htm" />
+    <Content Include="WebHelp\Alloys\Reductionrule\How_to_view_reduction_rules.htm" />
+    <Content Include="WebHelp\Alloys\Reductionrule\Reduction_Rules.htm" />
+    <Content Include="WebHelp\Alloys\SelectMech.jpg" />
+    <Content Include="WebHelp\AnodizeLineMc.JPG" />
+    <Content Include="WebHelp\AnodizeThhicknessTab.JPG" />
+    <Content Include="WebHelp\coatingtab.JPG" />
+    <Content Include="WebHelp\coatingthicknessTab.JPG" />
+    <Content Include="WebHelp\coilno.bmp" />
+    <Content Include="WebHelp\CoilsReport\Coils_Received_Report.htm" />
+    <Content Include="WebHelp\CoilsReport\Coils_Received_Report_Overview.htm" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport.css" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image002.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image004.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image006.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image007.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image009.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image011.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image013.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image015.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image017.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_image019.jpg" />
+    <Content Include="WebHelp\CoilsReport\HelpCoilReport_ns.css" />
+    <Content Include="WebHelp\CoilsReport\How_To_Export_Generated_Report_to_Excel.htm" />
+    <Content Include="WebHelp\CoilsReport\How_to_Generate_Report.htm" />
+    <Content Include="WebHelp\CoilsReport\How_to_Print_Generated_Report.htm" />
+    <Content Include="WebHelp\CoilsReport\Properties.htm" />
+    <Content Include="WebHelp\ConfirmaCopy.JPG" />
+    <Content Include="WebHelp\CopyVendorBtn.JPG" />
+    <Content Include="WebHelp\coretab.JPG" />
+    <Content Include="WebHelp\cshdat_robohelp.htm" />
+    <Content Include="WebHelp\cshdat_webhelp.htm" />
+    <Content Include="WebHelp\CutToLenghtTab.JPG" />
+    <Content Include="WebHelp\default.css" />
+    <Content Include="WebHelp\default_ns.css" />
+    <Content Include="WebHelp\DeletMsg.jpg" />
+    <Content Include="WebHelp\DetaislMech.JPG" />
+    <Content Include="WebHelp\ehlpdhtm.js" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance.css" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_ElementMaintenance_ElementMaintenance_image003.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image002.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image005.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image007.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image009.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image011.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image013.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image014.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_image015.jpg" />
+    <Content Include="WebHelp\ElementMaintenance\ElementMaintenance_ns.css" />
+    <Content Include="WebHelp\ElementMaintenance\Element_Maintenance.htm" />
+    <Content Include="WebHelp\ElementMaintenance\Element_Maintenance_Overview.htm" />
+    <Content Include="WebHelp\ElementMaintenance\How_to_add_new_element.htm" />
+    <Content Include="WebHelp\ElementMaintenance\How_to_edit_elements.htm" />
+    <Content Include="WebHelp\ElementMaintenance\How_to_view_elements.htm" />
+    <Content Include="WebHelp\ElementMaintenance\How_to_view_History.htm" />
+    <Content Include="WebHelp\ElementMaintenance\Properties.htm" />
+    <Content Include="WebHelp\elementVendorCopy.JPG" />
+    <Content Include="WebHelp\enddate.bmp" />
+    <Content Include="WebHelp\Field_description.htm" />
+    <Content Include="WebHelp\Field_Description_vendor.htm" />
+    <Content Include="WebHelp\FurnaceTab.JPG" />
+    <Content Include="WebHelp\go.bmp" />
+    <Content Include="WebHelp\Help.css" />
+    <Content Include="WebHelp\Help_Help_Help_Help_image007.jpg" />
+    <Content Include="WebHelp\Help_Help_Help_image022.jpg" />
+    <Content Include="WebHelp\Help_Help_Help_image023.jpg" />
+    <Content Include="WebHelp\Help_Help_Help_image035.jpg" />
+    <Content Include="WebHelp\Help_image002.jpg" />
+    <Content Include="WebHelp\Help_image003.jpg" />
+    <Content Include="WebHelp\Help_image005.jpg" />
+    <Content Include="WebHelp\Help_image006.jpg" />
+    <Content Include="WebHelp\Help_image008.jpg" />
+    <Content Include="WebHelp\Help_image009.jpg" />
+    <Content Include="WebHelp\Help_image011.jpg" />
+    <Content Include="WebHelp\Help_image013.jpg" />
+    <Content Include="WebHelp\Help_image015.jpg" />
+    <Content Include="WebHelp\Help_image017.jpg" />
+    <Content Include="WebHelp\Help_image019.gif" />
+    <Content Include="WebHelp\Help_image021.jpg" />
+    <Content Include="WebHelp\Help_image025.jpg" />
+    <Content Include="WebHelp\Help_image026.jpg" />
+    <Content Include="WebHelp\Help_image027.jpg" />
+    <Content Include="WebHelp\Help_image029.jpg" />
+    <Content Include="WebHelp\Help_image030.jpg" />
+    <Content Include="WebHelp\Help_image031.jpg" />
+    <Content Include="WebHelp\Help_image032.jpg" />
+    <Content Include="WebHelp\Help_image033.jpg" />
+    <Content Include="WebHelp\Help_image034.jpg" />
+    <Content Include="WebHelp\Help_image037.jpg" />
+    <Content Include="WebHelp\Help_image038.jpg" />
+    <Content Include="WebHelp\Help_image039.jpg" />
+    <Content Include="WebHelp\Help_image041.jpg" />
+    <Content Include="WebHelp\Help_image042.jpg" />
+    <Content Include="WebHelp\Help_image043.jpg" />
+    <Content Include="WebHelp\Help_image045.gif" />
+    <Content Include="WebHelp\Help_image046.jpg" />
+    <Content Include="WebHelp\Help_image047.jpg" />
+    <Content Include="WebHelp\Help_image048.jpg" />
+    <Content Include="WebHelp\Help_image050.jpg" />
+    <Content Include="WebHelp\Help_image051.jpg" />
+    <Content Include="WebHelp\Help_image053.jpg" />
+    <Content Include="WebHelp\Help_image054.jpg" />
+    <Content Include="WebHelp\Help_image056.jpg" />
+    <Content Include="WebHelp\Help_image057.jpg" />
+    <Content Include="WebHelp\Help_image058.jpg" />
+    <Content Include="WebHelp\Help_image059.jpg" />
+    <Content Include="WebHelp\Help_image060.jpg" />
+    <Content Include="WebHelp\Help_image062.jpg" />
+    <Content Include="WebHelp\Help_image063.jpg" />
+    <Content Include="WebHelp\Help_image064.jpg" />
+    <Content Include="WebHelp\Help_image066.jpg" />
+    <Content Include="WebHelp\Help_image067.jpg" />
+    <Content Include="WebHelp\Help_image069.jpg" />
+    <Content Include="WebHelp\Help_image070.jpg" />
+    <Content Include="WebHelp\Help_image072.jpg" />
+    <Content Include="WebHelp\Help_image073.jpg" />
+    <Content Include="WebHelp\Help_image075.jpg" />
+    <Content Include="WebHelp\Help_image076.jpg" />
+    <Content Include="WebHelp\Help_image077.jpg" />
+    <Content Include="WebHelp\Help_image078.jpg" />
+    <Content Include="WebHelp\Help_ns.css" />
+    <Content Include="WebHelp\History.JPG" />
+    <Content Include="WebHelp\History_Element.JPG" />
+    <Content Include="WebHelp\icon_delete.gif" />
+    <Content Include="WebHelp\IDWidth.JPG" />
+    <Content Include="WebHelp\Introduction.htm" />
+    <Content Include="WebHelp\IQR\CustomerSearch\Customer_Search.htm" />
+    <Content Include="WebHelp\IQR\HelpIQR.css" />
+    <Content Include="WebHelp\IQR\HelpIQR_HelpIQR_image001.gif" />
+    <Content Include="WebHelp\IQR\HelpIQR_image003.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image005.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image007.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image009.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image011.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image013.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image015.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image017.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image019.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image021.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image023.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image025.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image027.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image029.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image031.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image033.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image035.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image037.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image039.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image041.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image042.gif" />
+    <Content Include="WebHelp\IQR\HelpIQR_image044.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image046.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image048.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image050.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image052.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image054.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image056.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image058.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image060.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image062.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image064.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image066.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image068.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image070.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image072.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image074.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image076.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image078.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image080.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image082.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image084.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image086.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image088.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image090.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image092.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image094.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image096.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image098.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image100.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image102.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image104.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image106.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image108.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image110.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image112.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image114.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image116.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image118.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image120.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image122.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image124.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image126.gif" />
+    <Content Include="WebHelp\IQR\HelpIQR_image128.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image130.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_image132.jpg" />
+    <Content Include="WebHelp\IQR\HelpIQR_ns.css" />
+    <Content Include="WebHelp\IQR\HelpIQR_ns_nc.css" />
+    <Content Include="WebHelp\IQR\IQRAdminSettings\Administrative_Settings.htm" />
+    <Content Include="WebHelp\IQR\IQRAdvancedSearch\IQR_-Advanced_Search.htm" />
+    <Content Include="WebHelp\IQR\IQRMainPage.htm" />
+    <Content Include="WebHelp\IQR\IQRPermissions\3%29_IQR_Permissions.htm" />
+    <Content Include="WebHelp\IQR\IQR\Existing_Item_Template.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRAdminSettings\Administrative_Settings.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRAdvancedSearch\IQR_-_Advanced_Search.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\2.1_IQR_Details.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Approval_Status.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Initiator\Initiator_How_to_initiate_an_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Initiator\Order_Details.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Initiator\Part_&amp;_Product_Details.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Initiator\Properties.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Initiator\Tolling.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Initiator_II_-_Edit_IQR_Entries.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Machine_Capability_Machine_Capability_Check_.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Mandatory_Fields_across_tabs.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Materials_Manager_How_to_Approve_Reject_an_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Navigation_across_tabs.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Notification_to_user_for_pending_action_and_how_the_user_will_access_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Process_Group_-_Approve_Reject_IQR_on_the_basis_of_tolerance_limits_for_Gauge_Width.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Subcontractor_Outside_Tolling_Information_and_Approve_Reject_Final_Approval_of_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Technical_Services_II_-_Setup_Item_Template_OR_Final_Approval_Of_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRDetails\Technical_Services_I_How_to_Reject_Approve_an_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRListings\IQR_Listings.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRWorkflow\IQR_is_brokered.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRWorkflow\IQR_Workflow.htm" />
+    <Content Include="WebHelp\IQR\IQR\IQRWorkflow\Non-_Brokered_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\Previously_Rejected_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR\ViewIQR\View_IQR.htm" />
+    <Content Include="WebHelp\IQR\IQR_Module.htm" />
+    <Content Include="WebHelp\IQR_HELP1.css" />
+    <Content Include="WebHelp\IQR_HELP1_image002.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image004.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image006.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image008.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image010.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image012.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image014.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image016.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image018.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image020.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image022.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image024.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image026.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image028.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image030.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image032.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image034.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image036.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image038.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image040.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image042.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_image044.jpg" />
+    <Content Include="WebHelp\IQR_HELP1_ns.css" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\Copy_Vendor_Overview.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\Copy_Vendor_Restrictions.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\Field_Description.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\How_to_copy_Vendor_restrictions.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\How_to_view_Item_Template_History.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\Properties1.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\Properties3.htm" />
+    <Content Include="WebHelp\ItemTemplate\CopyVendor\View_History.htm" />
+    <Content Include="WebHelp\ItemTemplate\Create_Customer_Item_Template\Creating_Customer_Item_Templates.htm" />
+    <Content Include="WebHelp\ItemTemplate\Create_Customer_Item_Template\Properties.htm" />
+    <Content Include="WebHelp\ItemTemplate\Creating_Customer_Item_Templates.htm" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template.css" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image002.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image004.gif" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image006.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image008.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image010.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image012.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image013.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image015.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image017.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image019.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image021.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image023.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image025.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image027.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image028.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image030.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image032.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image034.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image036.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image038.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image040.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image042.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_image044.jpg" />
+    <Content Include="WebHelp\ItemTemplate\Help_Item_template_ns.css" />
+    <Content Include="WebHelp\ItemTemplate\IT.css" />
+    <Content Include="WebHelp\ItemTemplate\ItemTemplate.htm" />
+    <Content Include="WebHelp\ItemTemplate\Item_Template.htm" />
+    <Content Include="WebHelp\ItemTemplate\Item_Template_Overview.htm" />
+    <Content Include="WebHelp\ItemTemplate\IT_image002.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image004.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image005.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image007.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image008.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image010.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image011.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image013.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image014.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image016.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image017.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image018.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image019.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image023.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image025.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image030.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image031.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image032.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image033.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image035.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image036.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image037.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image039.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image040.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image041.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image043.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image045.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image047.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image049.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image050.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_image052.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image054.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image056.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image058.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image060.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image062.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image064.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_image068.jpg" />
+    <Content Include="WebHelp\ItemTemplate\IT_IT_image026.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_IT_IT_image027.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_IT_IT_image028.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_IT_IT_IT_image021.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_IT_IT_IT_IT_IT_IT_image020.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_IT_IT_IT_IT_IT_IT_IT_IT_image029.gif" />
+    <Content Include="WebHelp\ItemTemplate\IT_ns.css" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Alternate_Process_creation.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy.css" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image002.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image004.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image006.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image008.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image010.gif" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image012.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image014.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image016.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image018.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_image020.jpg" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Help_Item_template_Mass_Copy_ns.css" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Mass_copy.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Mass_Process_Copy_Overview.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Properties.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Properties2.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Search_for_processes_across_Item-Templates.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Step_1_Search_for_processes_across_Item-Templates.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Step_2_Alternate_Process_creation.htm" />
+    <Content Include="WebHelp\ItemTemplate\MassProcessCopy\Step_3_Mass_copy.htm" />
+    <Content Include="WebHelp\ItemTemplate\Properties2.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Chemistry_Restriction.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Copy_Item_template.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Create_New_Item_Template.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Edit_Process.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\History.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\How_to_Copy_a_Process.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\How_to_create_a_New_Process.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\How_to_Edit_a_Version.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\How_to_View_Item_template.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Item_Specifications.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Part_and_Product_Details.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Properties.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Properties1.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Properties_Tab.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Search_Overview.htm" />
+    <Content Include="WebHelp\ItemTemplate\Search\Std._Mfg._Processes.htm" />
+    <Content Include="WebHelp\ksiGaugeTab.JPG" />
+    <Content Include="WebHelp\LevelingTab.JPG" />
+    <Content Include="WebHelp\Lookups_Maintenance\LookupCategory.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\lookupCategory\Field_Description.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\lookupCategory\How_to_Add_new_Lookup-Category.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\lookupCategory\How_to_Update_Lookup-Category.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\lookupCategory\Lookup_Category.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\LookupCategory_Maintenance\Field_Description.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\LookupCategory_Maintenance\How_to_edit_LookupCategory_for_a_user.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\LookupCategory_Maintenance\Lookup_Category_Maintenance.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups\Field_Description.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups\How_to_Add_new_Lookups.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups\How_to_define_hierarchy_in_Lookups.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups\How_to_Update_Lookups.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups\How_to_View_Lookups.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups\Lookups.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookups_Maintenance_Module_Overview.htm" />
+    <Content Include="WebHelp\Lookups_Maintenance\Lookup_History\View_Lookup-History.htm" />
+    <Content Include="WebHelp\Lookup_Help_2.css" />
+    <Content Include="WebHelp\Lookup_Help_2_image002.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image004.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image006.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image008.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image010.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image013.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image016.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image019.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image022.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image024.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image026.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image028.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image030.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image032.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image034.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image036.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image038.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image039.gif" />
+    <Content Include="WebHelp\Lookup_Help_2_image041.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image043.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image045.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image047.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image049.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image051.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_image053.jpg" />
+    <Content Include="WebHelp\Lookup_Help_2_Lookup_Help_2_image011.gif" />
+    <Content Include="WebHelp\Lookup_Help_2_Lookup_Help_2_image014.gif" />
+    <Content Include="WebHelp\Lookup_Help_2_Lookup_Help_2_image017.gif" />
+    <Content Include="WebHelp\Lookup_Help_2_Lookup_Help_2_image020.gif" />
+    <Content Include="WebHelp\Lookup_Help_2_ns.css" />
+    <Content Include="WebHelp\Lookup_View.bmp" />
+    <Content Include="WebHelp\Machine.htm" />
+    <Content Include="WebHelp\Machines\Anodize\Anodize_Machine_capabilities.htm" />
+    <Content Include="WebHelp\Machines\Anodize\Anodizing_capability.htm" />
+    <Content Include="WebHelp\Machines\Anodize\Field_Description_anodize.htm" />
+    <Content Include="WebHelp\Machines\Anodize\How_to_Update_the_Anodize_capability.htm" />
+    <Content Include="WebHelp\Machines\common\How_to_Add_Main_properties_of_a_new_Machine.htm" />
+    <Content Include="WebHelp\Machines\common\How_to_Update_the_Coil_Receiving_ability_of_a_Subcontractor_Machine.htm" />
+    <Content Include="WebHelp\Machines\common\How_to_Update_the_Main_properties_of_a_Machine.htm" />
+    <Content Include="WebHelp\Machines\common\How_to_view_Machine_History.htm" />
+    <Content Include="WebHelp\Machines\common\Machine_Common_Properties.htm" />
+    <Content Include="WebHelp\Machines\common\Machine_History.htm" />
+    <Content Include="WebHelp\Machines\common\Machine_Specific_capabilities.htm" />
+    <Content Include="WebHelp\Machines\common\Main_Field_Description.htm" />
+    <Content Include="WebHelp\Machines\common\Main_properties.htm" />
+    <Content Include="WebHelp\Machines\common\Subcontractor_Coil_Receiving_ability.htm" />
+    <Content Include="WebHelp\Machines\common\SubContractor_Field_Description.htm" />
+    <Content Include="WebHelp\Machines\Cut_to_Length\Cut_to_Length_capability.htm" />
+    <Content Include="WebHelp\Machines\Cut_to_Length\Cut_To_Length_Machine_capabilities.htm" />
+    <Content Include="WebHelp\Machines\Cut_to_Length\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\Cut_to_Length\How_to_Update_the_Cut_to_Length_capability_of_a_Cut_to_Length_Machine.htm" />
+    <Content Include="WebHelp\Machines\furnance\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\furnance\Furnace_Machine_capabilities.htm" />
+    <Content Include="WebHelp\Machines\furnance\Furnace_Program_and_Dimensions.htm" />
+    <Content Include="WebHelp\Machines\furnance\How_to_Update_the_Furnace_Program_and_Dimensions_capability_for_a_FurnaceMachine.htm" />
+    <Content Include="WebHelp\Machines\levellers\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\levellers\How_to_Update_the_Leveling_capability_of_a_Leveling_Machine.htm" />
+    <Content Include="WebHelp\Machines\levellers\Leveling_capability.htm" />
+    <Content Include="WebHelp\Machines\levellers\Leveling_Machine_capabilities.htm" />
+    <Content Include="WebHelp\Machines\Machines.htm" />
+    <Content Include="WebHelp\Machines\Machines_Overview.htm" />
+    <Content Include="WebHelp\Machines\Other_Machines.htm" />
+    <Content Include="WebHelp\Machines\painters\Coating_capability.htm" />
+    <Content Include="WebHelp\Machines\painters\Coating_Thickness_Capability.htm" />
+    <Content Include="WebHelp\Machines\painters\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\painters\Field_Description_Paints.htm" />
+    <Content Include="WebHelp\Machines\painters\How_to_Update_the_Coating_Thickness_capability_of_a_Painting_Machine.htm" />
+    <Content Include="WebHelp\Machines\painters\How_to_Update_the_Paint_capability_of_a_Painting_Machine.htm" />
+    <Content Include="WebHelp\Machines\painters\Painting_Machine_capabilities.htm" />
+    <Content Include="WebHelp\Machines\painters\Paints_capability.htm" />
+    <Content Include="WebHelp\Machines\Properties.htm" />
+    <Content Include="WebHelp\Machines\Rollers\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\Rollers\How_to_Update_the_Roller_Type_capability_of_a_Rolling_Machine.htm" />
+    <Content Include="WebHelp\Machines\Rollers\Roller_Type_capability.htm" />
+    <Content Include="WebHelp\Machines\Rollers\Rolling_Machine_capabilities.htm" />
+    <Content Include="WebHelp\Machines\slitter\coating\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\slitter\gauge\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\slitter\Gauge_Width_capability.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Add_an_Inner_Diameter_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Add_a_Gauge_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Add_a_Number_of_Cuts_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Delete_an_Inner_Diameter_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Delete_a_Gauge_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Delete_a_Number_of_Cuts_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Update_an_Inner_Diameter_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Update_a_Gauge_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Update_a_Number_of_Cuts_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Update_the_Coating_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\How_to_Update_the_Core_Materials_for_Inner_Diameter_capability_of_a_Slitting_Machine.htm" />
+    <Content Include="WebHelp\Machines\slitter\innerDiaCap\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\slitter\Inner_Diameter_capability.htm" />
+    <Content Include="WebHelp\Machines\slitter\noofcuts\Field_Description.htm" />
+    <Content Include="WebHelp\Machines\slitter\Number_of_Cuts_capability.htm" />
+    <Content Include="WebHelp\Machines\slitter\Slitting_Machine_capabilities.htm" />
+    <Content Include="WebHelp\machine_image004.jpg" />
+    <Content Include="WebHelp\Mechical_Tensile_Limits.JPG" />
+    <Content Include="WebHelp\NoTopic.htm" />
+    <Content Include="WebHelp\NoTopic1.htm" />
+    <Content Include="WebHelp\paints.JPG" />
+    <Content Include="WebHelp\pono.bmp" />
+    <Content Include="WebHelp\RerollShipping\How_To_Get_Back_On_Search_Page.htm" />
+    <Content Include="WebHelp\RerollShipping\How_to_Get_Coils_List.htm" />
+    <Content Include="WebHelp\RerollShipping\How_To_View_Coil_Details.htm" />
+    <Content Include="WebHelp\RerollShipping\How_To_View_Element_Chemistry_Information.htm" />
+    <Content Include="WebHelp\RerollShipping\Properties.htm" />
+    <Content Include="WebHelp\RerollShipping\Receipts_Search_PO_Receipts_By_Coil_PO_Lot_.htm" />
+    <Content Include="WebHelp\RerollShipping\Receipts_Search_PO_Receipts_by_Coil_PO_Lot_Overview.htm" />
+    <Content Include="WebHelp\RerollShipping\RS.css" />
+    <Content Include="WebHelp\RerollShipping\RS_image002.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image004.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image006.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image008.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image010.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image012.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image014.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image015.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image017.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image019.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image021.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image023.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_image025.jpg" />
+    <Content Include="WebHelp\RerollShipping\RS_ns.css" />
+    <Content Include="WebHelp\returntosearch.bmp" />
+    <Content Include="WebHelp\reviewresults.bmp" />
+    <Content Include="WebHelp\rewindtab.JPG" />
+    <Content Include="WebHelp\RollFinishTab.JPG" />
+    <Content Include="WebHelp\Security\Help1.css" />
+    <Content Include="WebHelp\Security\Help1_image075.jpg" />
+    <Content Include="WebHelp\Security\Help1_image077.jpg" />
+    <Content Include="WebHelp\Security\Help1_image079.jpg" />
+    <Content Include="WebHelp\Security\Help1_image081.jpg" />
+    <Content Include="WebHelp\Security\Help1_image083.jpg" />
+    <Content Include="WebHelp\Security\Help1_image085.jpg" />
+    <Content Include="WebHelp\Security\Help1_image087.jpg" />
+    <Content Include="WebHelp\Security\Help1_image089.jpg" />
+    <Content Include="WebHelp\Security\Help1_image090.jpg" />
+    <Content Include="WebHelp\Security\Help1_image092.jpg" />
+    <Content Include="WebHelp\Security\Help1_image094.jpg" />
+    <Content Include="WebHelp\Security\Help1_image096.jpg" />
+    <Content Include="WebHelp\Security\Help1_image098.jpg" />
+    <Content Include="WebHelp\Security\Help1_image100.jpg" />
+    <Content Include="WebHelp\Security\Help1_image102.jpg" />
+    <Content Include="WebHelp\Security\Help1_image103.jpg" />
+    <Content Include="WebHelp\Security\Help1_image105.jpg" />
+    <Content Include="WebHelp\Security\Help1_ns.css" />
+    <Content Include="WebHelp\Security\Login\Forced_Password_changes.htm" />
+    <Content Include="WebHelp\Security\Login\Login.htm" />
+    <Content Include="WebHelp\Security\Login\Login_security.htm" />
+    <Content Include="WebHelp\Security\privalages\Application_privileges.htm" />
+    <Content Include="WebHelp\Security\privalages\Apply_Privileges.htm" />
+    <Content Include="WebHelp\Security\privalages\Field_Description.htm" />
+    <Content Include="WebHelp\Security\privalages\How_to_View_Privileges.htm" />
+    <Content Include="WebHelp\Security\Security.htm" />
+    <Content Include="WebHelp\Security\Security_Overview.htm" />
+    <Content Include="WebHelp\Security\Setting\Configurable_System_settings.htm" />
+    <Content Include="WebHelp\Security\Setting\Field_Description.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\Group\Field_Description.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\Group\Group.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\Group\Group_List.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\Group\How_to_Add_a_Group.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\Group\How_to_Edit_a_Group.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\User\a.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\User\How_to_Add_a_New_User.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\User\How_to_Edit_a_User.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\User\Users.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\User\User_management.htm" />
+    <Content Include="WebHelp\Security\Usermanagement\User_Management.htm" />
+    <Content Include="WebHelp\Selectmachine.JPG" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\1_Side_Scrap_and_Trim_Overview.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\2_Properties.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\3_How_to_view_Standard_Scrap_and_Trim.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\4_How_to_add_new_record_in_Standard_Scrap_and_Trim.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\5_How_to_edit_existing_record_in_Standard_Scrap_and_Trim.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\6_How_to_delete_record_in_Standard_Scrap_and_Trim.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\7_How_to_view_Reduction_Tables_History.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\Edit_image002.gif" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\Field_Description.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\Side_Scrap_and_Trim.htm" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim.css" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image006.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image008.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image010.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image012.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image014.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image016.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image018.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image020.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image022.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_image024.jpg" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_ns.css" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_UserManual_SideScrapAndTrim_image001.gif" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_UserManual_SideScrapAndTrim_image003.gif" />
+    <Content Include="WebHelp\Side_Scrap_and_Trim\UserManual_SideScrapAndTrim_UserManual_SideScrapAndTrim_image004.gif" />
+    <Content Include="WebHelp\startdate.bmp" />
+    <Content Include="WebHelp\SuggestedTolerance.JPG" />
+    <Content Include="WebHelp\suncontractorTab.JPG" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils.css" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image002.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image004.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image006.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image008.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image010.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image012.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image014.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image016.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image018.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image020.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image022.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_image024.jpg" />
+    <Content Include="WebHelp\Suspended_Coils\Help_Suspended_Coils_ns.css" />
+    <Content Include="WebHelp\Suspended_Coils\How_to_add_comments_against_a_coil.htm" />
+    <Content Include="WebHelp\Suspended_Coils\How_to_Process_a_Suspended_Coil.htm" />
+    <Content Include="WebHelp\Suspended_Coils\How_to_view_Coil_Listing.htm" />
+    <Content Include="WebHelp\Suspended_Coils\How_to_view_the_processing_history_of_a_Suspended_Coil.htm" />
+    <Content Include="WebHelp\Suspended_Coils\Properties.htm" />
+    <Content Include="WebHelp\Suspended_Coils\Suspended_Coils.htm" />
+    <Content Include="WebHelp\Suspended_Coils\Suspended_Coils_Overview.htm" />
+    <Content Include="WebHelp\TemperGroups\Field_Description.htm" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS.css" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image002.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image004.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image006.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image008.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image009.gif" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image011.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image012.gif" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image013.gif" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image015.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_image017.jpg" />
+    <Content Include="WebHelp\TemperGroups\Help_tEMPER_gROUP_rEDUCTIONS_ns.css" />
+    <Content Include="WebHelp\TemperGroups\How_to_add_new_record_in_Reduction_Tables.htm" />
+    <Content Include="WebHelp\TemperGroups\How_to_edit_existing_record_in_Reduction_Tables.htm" />
+    <Content Include="WebHelp\TemperGroups\How_to_view_Reduction_Tables.htm" />
+    <Content Include="WebHelp\TemperGroups\How_to_view_Reduction_Tables_History.htm" />
+    <Content Include="WebHelp\TemperGroups\Properties.htm" />
+    <Content Include="WebHelp\TemperGroups\Temper_Group_Reduction_Tables.htm" />
+    <Content Include="WebHelp\TemperGroups\Temper_Group_Reduction_Tables_Overview.htm" />
+    <Content Include="WebHelp\UalHelp.htm" />
+    <Content Include="WebHelp\UalHelp_csh.htm" />
+    <Content Include="WebHelp\UalHelp_rhc.htm" />
+    <Content Include="WebHelp\vendorlotno.bmp" />
+    <Content Include="WebHelp\vendorno.bmp" />
+    <Content Include="WebHelp\viewcoildetail.bmp" />
+    <Content Include="WebHelp\whdata\whftdata.js" />
+    <Content Include="WebHelp\whdata\whftdata0.htm" />
+    <Content Include="WebHelp\whdata\whftdata0.xml" />
+    <Content Include="WebHelp\whdata\whftdata1.htm" />
+    <Content Include="WebHelp\whdata\whftdata1.xml" />
+    <Content Include="WebHelp\whdata\whftdata2.htm" />
+    <Content Include="WebHelp\whdata\whftdata2.xml" />
+    <Content Include="WebHelp\whdata\whfts.htm" />
+    <Content Include="WebHelp\whdata\whfts.js" />
+    <Content Include="WebHelp\whdata\whfts.xml" />
+    <Content Include="WebHelp\whdata\whfwdata.js" />
+    <Content Include="WebHelp\whdata\whfwdata0.htm" />
+    <Content Include="WebHelp\whdata\whfwdata0.xml" />
+    <Content Include="WebHelp\whdata\whfwdata1.htm" />
+    <Content Include="WebHelp\whdata\whfwdata1.xml" />
+    <Content Include="WebHelp\whdata\whfwdata2.htm" />
+    <Content Include="WebHelp\whdata\whfwdata2.xml" />
+    <Content Include="WebHelp\whdata\whfwdata3.htm" />
+    <Content Include="WebHelp\whdata\whfwdata3.xml" />
+    <Content Include="WebHelp\whdata\whfwdata4.htm" />
+    <Content Include="WebHelp\whdata\whfwdata4.xml" />
+    <Content Include="WebHelp\whdata\whfwdata5.htm" />
+    <Content Include="WebHelp\whdata\whfwdata5.xml" />
+    <Content Include="WebHelp\whdata\whfwdata6.htm" />
+    <Content Include="WebHelp\whdata\whfwdata6.xml" />
+    <Content Include="WebHelp\whdata\whfwdata7.htm" />
+    <Content Include="WebHelp\whdata\whfwdata7.xml" />
+    <Content Include="WebHelp\whdata\whgdata.js" />
+    <Content Include="WebHelp\whdata\whglo.htm" />
+    <Content Include="WebHelp\whdata\whglo.js" />
+    <Content Include="WebHelp\whdata\whglo.xml" />
+    <Content Include="WebHelp\whdata\whidata.js" />
+    <Content Include="WebHelp\whdata\whidata0.htm" />
+    <Content Include="WebHelp\whdata\whidata0.xml" />
+    <Content Include="WebHelp\whdata\whidata1.htm" />
+    <Content Include="WebHelp\whdata\whidata1.xml" />
+    <Content Include="WebHelp\whdata\whidata2.htm" />
+    <Content Include="WebHelp\whdata\whidata2.xml" />
+    <Content Include="WebHelp\whdata\whidata3.htm" />
+    <Content Include="WebHelp\whdata\whidata3.xml" />
+    <Content Include="WebHelp\whdata\whidx.htm" />
+    <Content Include="WebHelp\whdata\whidx.js" />
+    <Content Include="WebHelp\whdata\whidx.xml" />
+    <Content Include="WebHelp\whdata\whtdata.js" />
+    <Content Include="WebHelp\whdata\whtdata0.htm" />
+    <Content Include="WebHelp\whdata\whtdata0.xml" />
+    <Content Include="WebHelp\whdata\whtdata1.htm" />
+    <Content Include="WebHelp\whdata\whtdata1.xml" />
+    <Content Include="WebHelp\whdata\whtdata2.htm" />
+    <Content Include="WebHelp\whdata\whtdata2.xml" />
+    <Content Include="WebHelp\whdata\whtdata3.htm" />
+    <Content Include="WebHelp\whdata\whtdata3.xml" />
+    <Content Include="WebHelp\whdata\whtdata4.htm" />
+    <Content Include="WebHelp\whdata\whtdata4.xml" />
+    <Content Include="WebHelp\whdata\whtdata5.htm" />
+    <Content Include="WebHelp\whdata\whtdata5.xml" />
+    <Content Include="WebHelp\whdata\whtdata6.htm" />
+    <Content Include="WebHelp\whdata\whtdata6.xml" />
+    <Content Include="WebHelp\whdata\whtdata7.htm" />
+    <Content Include="WebHelp\whdata\whtdata7.xml" />
+    <Content Include="WebHelp\whdata\whtdata8.htm" />
+    <Content Include="WebHelp\whdata\whtdata8.xml" />
+    <Content Include="WebHelp\whdata\whtdata9.htm" />
+    <Content Include="WebHelp\whdata\whtdata9.xml" />
+    <Content Include="WebHelp\whdata\whtoc.htm" />
+    <Content Include="WebHelp\whdata\whtoc.js" />
+    <Content Include="WebHelp\whdata\whtoc.xml" />
+    <Content Include="WebHelp\whestart.ico" />
+    <Content Include="WebHelp\whfbody.htm" />
+    <Content Include="WebHelp\whfdhtml.htm" />
+    <Content Include="WebHelp\whfform.htm" />
+    <Content Include="WebHelp\whfhost.js" />
+    <Content Include="WebHelp\whform.js" />
+    <Content Include="WebHelp\whframes.js" />
+    <Content Include="WebHelp\whgbody.htm" />
+    <Content Include="WebHelp\whgdata\whexpbar.gif" />
+    <Content Include="WebHelp\whgdata\whlstf0.htm" />
+    <Content Include="WebHelp\whgdata\whlstf1.htm" />
+    <Content Include="WebHelp\whgdata\whlstf10.htm" />
+    <Content Include="WebHelp\whgdata\whlstf11.htm" />
+    <Content Include="WebHelp\whgdata\whlstf12.htm" />
+    <Content Include="WebHelp\whgdata\whlstf13.htm" />
+    <Content Include="WebHelp\whgdata\whlstf14.htm" />
+    <Content Include="WebHelp\whgdata\whlstf15.htm" />
+    <Content Include="WebHelp\whgdata\whlstf16.htm" />
+    <Content Include="WebHelp\whgdata\whlstf17.htm" />
+    <Content Include="WebHelp\whgdata\whlstf18.htm" />
+    <Content Include="WebHelp\whgdata\whlstf19.htm" />
+    <Content Include="WebHelp\whgdata\whlstf2.htm" />
+    <Content Include="WebHelp\whgdata\whlstf20.htm" />
+    <Content Include="WebHelp\whgdata\whlstf21.htm" />
+    <Content Include="WebHelp\whgdata\whlstf22.htm" />
+    <Content Include="WebHelp\whgdata\whlstf23.htm" />
+    <Content Include="WebHelp\whgdata\whlstf24.htm" />
+    <Content Include="WebHelp\whgdata\whlstf25.htm" />
+    <Content Include="WebHelp\whgdata\whlstf3.htm" />
+    <Content Include="WebHelp\whgdata\whlstf4.htm" />
+    <Content Include="WebHelp\whgdata\whlstf5.htm" />
+    <Content Include="WebHelp\whgdata\whlstf6.htm" />
+    <Content Include="WebHelp\whgdata\whlstf7.htm" />
+    <Content Include="WebHelp\whgdata\whlstf8.htm" />
+    <Content Include="WebHelp\whgdata\whlstf9.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl0.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl1.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl10.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl11.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl12.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl13.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl14.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl15.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl16.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl17.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl18.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl19.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl2.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl20.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl21.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl22.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl23.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl3.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl4.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl5.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl6.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl7.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl8.htm" />
+    <Content Include="WebHelp\whgdata\whlstfl9.htm" />
+    <Content Include="WebHelp\whgdata\whlstg0.htm" />
+    <Content Include="WebHelp\whgdata\whlsti0.htm" />
+    <Content Include="WebHelp\whgdata\whlsti1.htm" />
+    <Content Include="WebHelp\whgdata\whlstt0.htm" />
+    <Content Include="WebHelp\whgdata\whlstt1.htm" />
+    <Content Include="WebHelp\whgdata\whlstt10.htm" />
+    <Content Include="WebHelp\whgdata\whlstt11.htm" />
+    <Content Include="WebHelp\whgdata\whlstt12.htm" />
+    <Content Include="WebHelp\whgdata\whlstt13.htm" />
+    <Content Include="WebHelp\whgdata\whlstt14.htm" />
+    <Content Include="WebHelp\whgdata\whlstt15.htm" />
+    <Content Include="WebHelp\whgdata\whlstt16.htm" />
+    <Content Include="WebHelp\whgdata\whlstt17.htm" />
+    <Content Include="WebHelp\whgdata\whlstt18.htm" />
+    <Content Include="WebHelp\whgdata\whlstt19.htm" />
+    <Content Include="WebHelp\whgdata\whlstt2.htm" />
+    <Content Include="WebHelp\whgdata\whlstt20.htm" />
+    <Content Include="WebHelp\whgdata\whlstt21.htm" />
+    <Content Include="WebHelp\whgdata\whlstt22.htm" />
+    <Content Include="WebHelp\whgdata\whlstt23.htm" />
+    <Content Include="WebHelp\whgdata\whlstt24.htm" />
+    <Content Include="WebHelp\whgdata\whlstt25.htm" />
+    <Content Include="WebHelp\whgdata\whlstt26.htm" />
+    <Content Include="WebHelp\whgdata\whlstt27.htm" />
+    <Content Include="WebHelp\whgdata\whlstt28.htm" />
+    <Content Include="WebHelp\whgdata\whlstt29.htm" />
+    <Content Include="WebHelp\whgdata\whlstt3.htm" />
+    <Content Include="WebHelp\whgdata\whlstt30.htm" />
+    <Content Include="WebHelp\whgdata\whlstt31.htm" />
+    <Content Include="WebHelp\whgdata\whlstt32.htm" />
+    <Content Include="WebHelp\whgdata\whlstt33.htm" />
+    <Content Include="WebHelp\whgdata\whlstt34.htm" />
+    <Content Include="WebHelp\whgdata\whlstt35.htm" />
+    <Content Include="WebHelp\whgdata\whlstt36.htm" />
+    <Content Include="WebHelp\whgdata\whlstt37.htm" />
+    <Content Include="WebHelp\whgdata\whlstt38.htm" />
+    <Content Include="WebHelp\whgdata\whlstt39.htm" />
+    <Content Include="WebHelp\whgdata\whlstt4.htm" />
+    <Content Include="WebHelp\whgdata\whlstt40.htm" />
+    <Content Include="WebHelp\whgdata\whlstt41.htm" />
+    <Content Include="WebHelp\whgdata\whlstt42.htm" />
+    <Content Include="WebHelp\whgdata\whlstt43.htm" />
+    <Content Include="WebHelp\whgdata\whlstt44.htm" />
+    <Content Include="WebHelp\whgdata\whlstt45.htm" />
+    <Content Include="WebHelp\whgdata\whlstt46.htm" />
+    <Content Include="WebHelp\whgdata\whlstt47.htm" />
+    <Content Include="WebHelp\whgdata\whlstt48.htm" />
+    <Content Include="WebHelp\whgdata\whlstt49.htm" />
+    <Content Include="WebHelp\whgdata\whlstt5.htm" />
+    <Content Include="WebHelp\whgdata\whlstt50.htm" />
+    <Content Include="WebHelp\whgdata\whlstt51.htm" />
+    <Content Include="WebHelp\whgdata\whlstt52.htm" />
+    <Content Include="WebHelp\whgdata\whlstt53.htm" />
+    <Content Include="WebHelp\whgdata\whlstt54.htm" />
+    <Content Include="WebHelp\whgdata\whlstt55.htm" />
+    <Content Include="WebHelp\whgdata\whlstt56.htm" />
+    <Content Include="WebHelp\whgdata\whlstt57.htm" />
+    <Content Include="WebHelp\whgdata\whlstt58.htm" />
+    <Content Include="WebHelp\whgdata\whlstt59.htm" />
+    <Content Include="WebHelp\whgdata\whlstt6.htm" />
+    <Content Include="WebHelp\whgdata\whlstt60.htm" />
+    <Content Include="WebHelp\whgdata\whlstt61.htm" />
+    <Content Include="WebHelp\whgdata\whlstt7.htm" />
+    <Content Include="WebHelp\whgdata\whlstt8.htm" />
+    <Content Include="WebHelp\whgdata\whlstt9.htm" />
+    <Content Include="WebHelp\whgdata\whnvf30.htm" />
+    <Content Include="WebHelp\whgdata\whnvf31.htm" />
+    <Content Include="WebHelp\whgdata\whnvf32.htm" />
+    <Content Include="WebHelp\whgdata\whnvf33.htm" />
+    <Content Include="WebHelp\whgdata\whnvl31.htm" />
+    <Content Include="WebHelp\whgdata\whnvl32.htm" />
+    <Content Include="WebHelp\whgdata\whnvl33.htm" />
+    <Content Include="WebHelp\whgdata\whnvp30.htm" />
+    <Content Include="WebHelp\whgdata\whnvp31.htm" />
+    <Content Include="WebHelp\whgdata\whnvp32.htm" />
+    <Content Include="WebHelp\whgdata\whnvp33.htm" />
+    <Content Include="WebHelp\whgdata\whnvt30.htm" />
+    <Content Include="WebHelp\whgdata\whnvt31.htm" />
+    <Content Include="WebHelp\whgdata\whnvt32.htm" />
+    <Content Include="WebHelp\whgdata\whnvt33.htm" />
+    <Content Include="WebHelp\whgdef.htm" />
+    <Content Include="WebHelp\whgdhtml.htm" />
+    <Content Include="WebHelp\whghost.js" />
+    <Content Include="WebHelp\whhost.js" />
+    <Content Include="WebHelp\whibody.htm" />
+    <Content Include="WebHelp\whidhtml.htm" />
+    <Content Include="WebHelp\whiform.htm" />
+    <Content Include="WebHelp\whihost.js" />
+    <Content Include="WebHelp\whlang.js" />
+    <Content Include="WebHelp\whmozemu.js" />
+    <Content Include="WebHelp\whmsg.js" />
+    <Content Include="WebHelp\whnjs.htm" />
+    <Content Include="WebHelp\whphost.js" />
+    <Content Include="WebHelp\whproj.htm" />
+    <Content Include="WebHelp\whproj.js" />
+    <Content Include="WebHelp\whproj.xml" />
+    <Content Include="WebHelp\whproxy.js" />
+    <Content Include="WebHelp\whres.xml" />
+    <Content Include="WebHelp\whrstart.ico" />
+    <Content Include="WebHelp\whskin_banner.htm" />
+    <Content Include="WebHelp\whskin_blank.htm" />
+    <Content Include="WebHelp\whskin_frmset01.htm" />
+    <Content Include="WebHelp\whskin_frmset010.htm" />
+    <Content Include="WebHelp\whskin_info.htm" />
+    <Content Include="WebHelp\whskin_mbars.htm" />
+    <Content Include="WebHelp\whskin_papplet.htm" />
+    <Content Include="WebHelp\whskin_pdhtml.htm" />
+    <Content Include="WebHelp\whskin_plist.htm" />
+    <Content Include="WebHelp\whskin_tbars.htm" />
+    <Content Include="WebHelp\whstart.ico" />
+    <Content Include="WebHelp\whstart.js" />
+    <Content Include="WebHelp\whstub.js" />
+    <Content Include="WebHelp\whst_topics.xml" />
+    <Content Include="WebHelp\whtbar.js" />
+    <Content Include="WebHelp\whtdhtml.htm" />
+    <Content Include="WebHelp\whthost.js" />
+    <Content Include="WebHelp\whtopic.js" />
+    <Content Include="WebHelp\wht_abge.jpg" />
+    <Content Include="WebHelp\wht_abgi.jpg" />
+    <Content Include="WebHelp\wht_abgw.jpg" />
+    <Content Include="WebHelp\wht_abte.jpg" />
+    <Content Include="WebHelp\wht_abti.jpg" />
+    <Content Include="WebHelp\wht_abtw.jpg" />
+    <Content Include="WebHelp\wht_fts_h.gif" />
+    <Content Include="WebHelp\wht_fts_n.gif" />
+    <Content Include="WebHelp\wht_glo_h.gif" />
+    <Content Include="WebHelp\wht_glo_n.gif" />
+    <Content Include="WebHelp\wht_go.gif" />
+    <Content Include="WebHelp\wht_hide.gif" />
+    <Content Include="WebHelp\wht_idx_h.gif" />
+    <Content Include="WebHelp\wht_idx_n.gif" />
+    <Content Include="WebHelp\wht_logo1.gif" />
+    <Content Include="WebHelp\wht_logo2.gif" />
+    <Content Include="WebHelp\wht_next.gif" />
+    <Content Include="WebHelp\wht_next_g.gif" />
+    <Content Include="WebHelp\wht_prev.gif" />
+    <Content Include="WebHelp\wht_prev_g.gif" />
+    <Content Include="WebHelp\wht_spac.gif" />
+    <Content Include="WebHelp\wht_sync.gif" />
+    <Content Include="WebHelp\wht_tab0.gif" />
+    <Content Include="WebHelp\wht_tab1.gif" />
+    <Content Include="WebHelp\wht_tab2.gif" />
+    <Content Include="WebHelp\wht_tab3.gif" />
+    <Content Include="WebHelp\wht_tab4.gif" />
+    <Content Include="WebHelp\wht_tab5.gif" />
+    <Content Include="WebHelp\wht_tab6.gif" />
+    <Content Include="WebHelp\wht_tab7.gif" />
+    <Content Include="WebHelp\wht_tab8.gif" />
+    <Content Include="WebHelp\wht_toc1.gif" />
+    <Content Include="WebHelp\wht_toc2.gif" />
+    <Content Include="WebHelp\wht_toc3.gif" />
+    <Content Include="WebHelp\wht_toc4.gif" />
+    <Content Include="WebHelp\wht_toc_h.gif" />
+    <Content Include="WebHelp\wht_toc_n.gif" />
+    <Content Include="WebHelp\wht_ws.gif" />
+    <Content Include="WebHelp\wht_ws_g.gif" />
+    <Content Include="WebHelp\whutils.js" />
+    <Content Include="WebHelp\whver.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Theme_1\CommonFormButtons\Thumbs.db" />
+    <None Include="Images\Theme_1\ItemTemplate\Buttons\Thumbs.db" />
+    <None Include="Images\Theme_1\MachineTabs\Thumbs.db" />
+    <None Include="Images\Theme_1\Thumbs.db" />
+    <Content Include="packages.config" />
+    <None Include="WebHelp\default.skn" />
+    <None Include="WebHelp\UalHelp.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Theme_1\AlloyMaintenance\Tabs\" />
+    <Folder Include="Images\Theme_1\Images\" />
+    <Folder Include="Images\Theme_1\LookupMaintenance\Tabs\" />
+    <Folder Include="Images\Theme_1\SuspendedCoils\Tabs\" />
+    <Folder Include="Images\Theme_1\UserManagement\Buttons\" />
+    <Folder Include="Images\Theme_1\UserManagement\Tabs\" />
+    <Folder Include="Images\Theme_1\VendorQualifications\Tabs\" />
+    <Folder Include="WebHelp\IQR\IQRDetails\" />
+    <Folder Include="WebHelp\IQR\IQRListings\" />
+    <Folder Include="WebHelp\IQR\IQRWorkflow\" />
+    <Folder Include="WebHelp\IQR\ViewIQR\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1921</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/UAL.WEB</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy.exe "$(TargetDir)$(TargetName).dll" "$(TargetDir)../../DLL" /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

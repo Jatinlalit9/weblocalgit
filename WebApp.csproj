@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76E0C9DD-997A-4261-B7A2-5EB04E806F14}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WebApp</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebApp</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccAuxPath>
+    </SccAuxPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\UAL1.css" />
+    <Content Include="Images\Theme_1\AlloyMaintenance\Buttons\btn_copy_std.gif" />
+    <Content Include="Images\Theme_1\AlloyMaintenance\Buttons\btn_copy_std_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_element_limits.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_element_limits_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_end2.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_mech.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_mech_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_properties.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_properties_down.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_reduction_rules.gif" />
+    <Content Include="Images\Theme_1\AlloyTabs\tab_reduction_rules_down.gif" />
+    <Content Include="Images\Theme_1\bottomborder.gif" />
+    <Content Include="Images\Theme_1\bottomleftcorner.gif" />
+    <Content Include="Images\Theme_1\bottomrightcorner.gif" />
+    <Content Include="Images\Theme_1\btn_left.gif" />
+    <Content Include="Images\Theme_1\btn_left_down.gif" />
+    <Content Include="Images\Theme_1\btn_right.gif" />
+    <Content Include="Images\Theme_1\btn_right_down.gif" />
+    <Content Include="Images\Theme_1\btn_tile.gif" />
+    <Content Include="Images\Theme_1\btn_tile_down.gif" />
+    <Content Include="Images\Theme_1\channelleftborder.gif" />
+    <Content Include="Images\Theme_1\channelrightborder.gif" />
+    <Content Include="Images\Theme_1\channeltopborder.gif" />
+    <Content Include="Images\Theme_1\channeltopleft.gif" />
+    <Content Include="Images\Theme_1\channeltopright.gif" />
+    <Content Include="Images\Theme_1\clear.gif" />
+    <Content Include="Images\Theme_1\clear_over.gif" />
+    <Content Include="Images\Theme_1\close.gif" />
+    <Content Include="Images\Theme_1\close_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_alloy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_element.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_element_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_machine.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_machine_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_catogory.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_catogory_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_layer.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_layer_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_new_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\add_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_orders.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\all_orders_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\a_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\a_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_category.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_category_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_new_lookup.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_add_new_lookup_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_back.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_back_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_category.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_category_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_lookup.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_add_lookup_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewcat.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewcat_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewlook.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\btn_save_and_addnewlook_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\busy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\b_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\b_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\cancel.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\cancel_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\copy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Copy_new_IQR.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Copy_new_IQR_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\copy_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\curve_left_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\curve_right_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\c_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\c_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\details.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\details_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\d_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\d_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\edit2.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\e_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\e_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\fill_details.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\fill_details_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\f_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\f_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\g_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\g_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\h_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\h_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_cancel.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_change_password.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_delete.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_edit.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_first.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_history.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_next.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_null.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_popup.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_prev.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_save.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_tick.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_view.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\icon_view2.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\add_row.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\add_row_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\attach_file.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\attach_file_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\btn_delete_selected.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\btn_delete_selected_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_existing_temp.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_existing_temp_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_prev_rej_IQR.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\check_prev_rej_IQR_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\Copy_new_IQR.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\Copy_new_IQR_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\copy_to_new_iqr.GIF" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\copy_to_new_iqr_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\no_quote.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\no_quote_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\routeandcopy.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\routeandcopy_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\saveandroute.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\saveandroute_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\save_addnewrow.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\save_addnewrow_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_process.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_process_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_temp.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\IqrButtons\setup_new_temp_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\i_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\i_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\j_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\j_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\k_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\k_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\l_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\l_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\m_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\m_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new_alias.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new_alias_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\new_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\n_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\n_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Open_orders.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\Open_orders_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\o_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\o_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\p_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\p_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\quotes.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\quotes_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\q_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\q_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\reset.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\reset_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\r_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\r_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_add.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_add_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_and_add_new_element.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_and_add_new_element_ov.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\save_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\s_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\s_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\tab_history.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\tab_history_down.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\t_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\t_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\upload.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\upload_over.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\u_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\u_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\v_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\v_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\w_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\w_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\x_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\x_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\y_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\y_on_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\z_off_12.gif" />
+    <Content Include="Images\Theme_1\CommonFormButtons\z_on_12.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add_new.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add_new_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\add_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\back.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\back_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_copy.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_copy_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_delete.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_delete_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_export2excel.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_export2excel_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_generate_rep.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_generate_rep_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_history.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_history_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_ok.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_ok_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_printrep.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\btn_printrep_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\cancel.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\cancel_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\clear.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\clear_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\close.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\close_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\edit2.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_add_new_01.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_arrow.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_arrow_left.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_cancel.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_change_password.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_delete.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_delete_new.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_edit.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_min.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_next.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_plus.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_popup.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_prev.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_save.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_save_new.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_tick.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_view.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\icon_view2.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortAsc.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortAsc_White.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortDesc.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\ig_tblSortDesc_White.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\next_up.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\no.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\no_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\prev_down.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\reset.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\reset_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\right_menu_left.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_add.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_add_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\save_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\search.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\search_over.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\tabs_tile.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\tab_end2.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\yes.gif" />
+    <Content Include="Images\Theme_1\Common\Buttons\yes_over.gif" />
+    <Content Include="Images\Theme_1\Common\Tabs\tab_history.gif" />
+    <Content Include="Images\Theme_1\Common\Tabs\tab_history_down.gif" />
+    <Content Include="Images\Theme_1\fill_details.gif" />
+    <Content Include="Images\Theme_1\headerbottomborder.gif" />
+    <Content Include="Images\Theme_1\headerbottomleft.gif" />
+    <Content Include="Images\Theme_1\headerbottomright.gif" />
+    <Content Include="Images\Theme_1\headerleftborder.gif" />
+    <Content Include="Images\Theme_1\headerrightborder.gif" />
+    <Content Include="Images\Theme_1\home.gif" />
+    <Content Include="Images\Theme_1\icon_help.gif" />
+    <Content Include="Images\Theme_1\ig_edit_0b.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueDown.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueDown_disabled.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueUp.gif" />
+    <Content Include="Images\Theme_1\ig_menuBlueUp_disabled.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_approvalstatus.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_approvalstatus_down.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_end2.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_mech_tensile_limits.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_mech_tensile_limits_down.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_orderdetails.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_orderdetails_down.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_part_product_details.gif" />
+    <Content Include="Images\Theme_1\IQRTabs\tab_part_product_details_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\add_row.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\add_row_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\all_orders.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\all_orders_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\attach_file.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\attach_file_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_existing_temp.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_existing_temp_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_prev_rej_IQR.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\check_prev_rej_IQR_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\copy_to_new_iqr.GIF" />
+    <Content Include="Images\Theme_1\IQR\Buttons\copy_to_new_iqr_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\no_quote.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\no_quote_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\Open_orders.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\Open_orders_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\quotes.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\quotes_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\routeandcopy.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\routeandcopy_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\saveandroute.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\saveandroute_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\save_addnewrow.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\save_addnewrow_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\setup_new_temp.gif" />
+    <Content Include="Images\Theme_1\IQR\Buttons\setup_new_temp_over.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_approvalstatus.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_approvalstatus_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_end2.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_orderdetails.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_orderdetails_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_part_product_details.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_part_product_details_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_properties.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_properties_down.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_tolling.gif" />
+    <Content Include="Images\Theme_1\IQR\Tabs\tab_tolling_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_checkall.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_checkall_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_clear_all.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_clear_all_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_alt_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_alt_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_new_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_copy_new_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_history.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_history_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_new_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\btn_new_process_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\continue_editing_pro.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\continue_editing_pro_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\copy_a_process.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\copy_a_process_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\Copy_process_newtemp.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\Copy_process_newtemp_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\create_pro_scratch.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\create_pro_scratch_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\edit_pro.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\edit_pro_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\go.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\go_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\insert_row_below.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\summary_view.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Buttons\summary_view_over.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_itemspecifications.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_itemspecifications_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_part_product_details.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_part_product_details_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_processes.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_processes_down.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_properties.gif" />
+    <Content Include="Images\Theme_1\ItemTemplate\Tabs\tab_properties_down.gif" />
+    <Content Include="Images\Theme_1\login.gif" />
+    <Content Include="Images\Theme_1\login_over.gif" />
+    <Content Include="Images\Theme_1\logout.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_category.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_category_down.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_new_lookup.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_add_new_lookup_down.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_category.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_category_down.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_lookup.gif" />
+    <Content Include="Images\Theme_1\LookupMaintenance\Buttons\btn_save_add_lookup_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Buttons\add_machine.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Buttons\add_machine_over.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_ano_thick_cap.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_ano_thick_cap_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating_thick.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coating_thick_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coil_receiving.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_coil_receiving_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_corematerial.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_corematerial_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_cutlength.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_cutlength_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_furnacepro.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_furnacepro_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_guage.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_guage_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_inner_dia.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_inner_dia_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_leveling.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_leveling_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_main.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_main_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_no_cuts.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_no_cuts_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_paints.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_paints_down.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_roll_finish.gif" />
+    <Content Include="Images\Theme_1\MachineMaintenance\Tabs\tab_roll_finish_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating_thick.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coating_thick_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coil_receiving.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_coil_receiving_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_corematerial.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_corematerial_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_cutlength.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_cutlength_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_furnacepro.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_furnacepro_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_guage.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_guage_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_inner_dia.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_inner_dia_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_leveling.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_leveling_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_main.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_main_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_no_cuts.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_no_cuts_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_paints.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_paints_down.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_rollertype.gif" />
+    <Content Include="Images\Theme_1\MachineTabs\tab_rollertype_down.gif" />
+    <Content Include="Images\Theme_1\mainlogo.gif" />
+    <Content Include="Images\Theme_1\menuSeperator.gif" />
+    <Content Include="Images\Theme_1\next_up.gif" />
+    <Content Include="Images\Theme_1\prev_down.gif" />
+    <Content Include="Images\Theme_1\reset.gif" />
+    <Content Include="Images\Theme_1\right_menu_left.gif" />
+    <Content Include="Images\Theme_1\save.gif" />
+    <Content Include="Images\Theme_1\save_over.gif" />
+    <Content Include="Images\Theme_1\search.gif" />
+    <Content Include="Images\Theme_1\search_over.gif" />
+    <Content Include="Images\Theme_1\SideScrapAndTrim\Tabs\tab_standard_scrap.gif" />
+    <Content Include="Images\Theme_1\SideScrapAndTrim\Tabs\tab_standard_scrap_down.gif" />
+    <Content Include="Images\Theme_1\SideScrapAndTrim\Tabs\tab_standard_scrap_over.gif" />
+    <Content Include="Images\Theme_1\SubMenuTriangle.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\add_alloy.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\add_alloy_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_assign_coil.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_assign_coil_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_attach_img_coil.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_attach_img_coil_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_comments.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_comments_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_run_check.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_run_check_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_scan_matching_alloy.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_scan_matching_alloy_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_set_restrict_use.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_set_restrict_use_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_proc_history.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_proc_history_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_restrict_use.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_view_restrict_use_over.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_viiew_proc_history.gif" />
+    <Content Include="Images\Theme_1\SuspendedCoils\Buttons\btn_viiew_proc_history_over.gif" />
+    <Content Include="Images\Theme_1\tabs_tile.gif" />
+    <Content Include="Images\Theme_1\tab_history.gif" />
+    <Content Include="Images\Theme_1\tab_history_down.gif" />
+    <Content Include="Images\Theme_1\topborder.gif" />
+    <Content Include="Images\Theme_1\topleftcorner.gif" />
+    <Content Include="Images\Theme_1\toprightcorner.gif" />
+    <Content Include="Images\Theme_1\transparent.gif" />
+    <Content Include="Images\Theme_1\verticalSep.GIF" />
+    <Content Include="JScripts\Common.js" />
+    <Content Include="JScripts\Infragistics\HM_Loader.js" />
+    <Content Include="JScripts\Infragistics\HM_ScriptDOM.js" />
+    <Content Include="JScripts\Infragistics\HM_ScriptIE4.js" />
+    <Content Include="JScripts\Infragistics\HM_ScriptNS4.js" />
+    <Content Include="JScripts\Infragistics\ig_calendar.js" />
+    <Content Include="JScripts\Infragistics\ig_csom.js" />
+    <Content Include="JScripts\Infragistics\ig_edit.js" />
+    <Content Include="JScripts\Infragistics\ig_mask.js" />
+    <Content Include="JScripts\Infragistics\ig_wbgWrapper.xslt" />
+    <Content Include="JScripts\Infragistics\ig_webchart.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_browser.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_crosshair.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_eventpayload.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_scrollbar.js" />
+    <Content Include="JScripts\Infragistics\ig_webchart_windowviewer.js" />
+    <Content Include="JScripts\Infragistics\ig_webcombo3_1.js" />
+    <Content Include="JScripts\Infragistics\ig_WebDropDown.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid.xslt" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_an.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_dl.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_dom.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ft.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_gb.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ie.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ie6.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_kb.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ml.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_nn.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ro.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_ro2.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_srt.js" />
+    <Content Include="JScripts\Infragistics\ig_WebGrid_xml.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbar2_2.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbarASC.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbarIE4.js" />
+    <Content Include="JScripts\Infragistics\ig_weblistbarNS4.js" />
+    <Content Include="JScripts\Infragistics\ig_webmenu.js" />
+    <Content Include="JScripts\Infragistics\ig_WebNavBar.js" />
+    <Content Include="JScripts\Infragistics\ig_webschedule.js" />
+    <Content Include="JScripts\Infragistics\ig_webtab.js" />
+    <Content Include="JScripts\Infragistics\ig_webtoolbar2_2.js" />
+    <Content Include="JScripts\Infragistics\ig_webtree.js" />
+    <Content Include="TestPageWebApp.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Compile Include="TestPageWebApp.aspx.cs">
+      <DependentUpon>TestPageWebApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="TestPageWebApp.aspx.resx">
+      <DependentUpon>TestPageWebApp.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Images\Theme_1\CommonFormButtons\Thumbs.db" />
+    <None Include="Images\Theme_1\CommonFormButtons\vssver.scc" />
+    <None Include="Images\Theme_1\Common\Tabs\vssver.scc" />
+    <None Include="Images\Theme_1\IQR\Tabs\vssver.scc" />
+    <None Include="Images\Theme_1\ItemTemplate\Tabs\vssver.scc" />
+    <None Include="Images\Theme_1\Thumbs.db" />
+    <None Include="JScripts\Infragistics\vssver.scc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\UAL.Gadgets\UAL.Gadgets.csproj">
+      <Project>{AFC02F70-0CE3-424E-9994-2B774D87FEDA}</Project>
+      <Name>UAL.Gadgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="Gadgets\Gadgets.csproj">
+      <Project>{195E9D7A-19CA-4440-B4D2-58AE908F55C6}</Project>
+      <Name>Gadgets</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Theme_1\AlloyMaintenance\Tabs\" />
+    <Folder Include="Images\Theme_1\LookupMaintenance\Tabs\" />
+    <Folder Include="Images\Theme_1\SuspendedCoils\Tabs\" />
+    <Folder Include="Images\Theme_1\UserManagement\Buttons\" />
+    <Folder Include="Images\Theme_1\UserManagement\Tabs\" />
+    <Folder Include="Images\Theme_1\VendorQualifications\Buttons\" />
+    <Folder Include="Images\Theme_1\VendorQualifications\Tabs\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57732</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
